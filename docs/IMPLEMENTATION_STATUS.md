@@ -91,3 +91,5 @@ Published and verified on the public site: Upcoming 8; Conference only 3 (ESSERC
 ## Submission-closure criterion (2026-09-07)
 
 Supersedes the conference-only criterion above: the section is now `Submissions closed` and depends only on the known paper deadline (EMNLP commitment where applicable) having passed. Notification need not be completed. NeurIPS 2026 joins ESSERC, ECCV and EMNLP 2026; Upcoming contains 7 editions. Unknown submission dates remain unclassified as closed, and existing TBA/Past groups retain precedence. Next-milestone order is preserved. Local all-category/Algorithm browser checks, Jekyll build, HTMLProofer and diff checks passed. Screenshot: `docs/screenshots/submissions-closed.png`.
+
+Deployment [run #5](https://github.com/ojy0216/mms-deadlines/actions/runs/34048491888) succeeded. Public browser verification confirmed Upcoming 7 and Submissions closed 4, including NeurIPS 2026. The automatic data update was pulled with `--ff-only`.
