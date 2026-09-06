@@ -4,4 +4,4 @@
 <meta name="description" content="{{ site.description | escape }}">
 <link rel="icon" href="{{ '/static/img/favicon.svg' | relative_url }}">
 <link rel="stylesheet" href="{{ '/static/css/schedule.css' | relative_url }}">
-<script defer src="{{ '/static/js/schedule.js' | relative_url }}"></script>
+<script defer src="{{ '/static/js/schedule.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
