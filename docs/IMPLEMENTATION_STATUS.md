@@ -81,3 +81,7 @@ The HTTPS Git token lacked workflow scope and SSH authentication was unavailable
 Upcoming & ongoing cards now sort by their next published milestone, earliest first, using the same event selection as the card's Next label. Ties use the conference ID; missing milestones sort last. Category filters retain this order. Local browser verification (all categories and Algorithm), Jekyll build, HTMLProofer and `git diff --check` passed. Screenshot: `docs/screenshots/upcoming-sorted.png`.
 
 Deployment of the ordering change succeeded in [Actions run #2](https://github.com/ojy0216/mms-deadlines/actions/runs/34047776843). The public site was reloaded and confirmed to begin ESSERC 2026 → ISSCC 2027 → ECCV 2026 → ICLR 2027, ordered by the Next milestone. The resulting automatic data commit was pulled with `--ff-only`.
+
+## Conference-only section (2026-09-07)
+
+Added `Conference only · submissions closed` after Upcoming. A known main submission (EMNLP commitment where applicable) and notification must both be past, with no other published future milestone. Unannounced deadlines are not treated as completed. ESSERC, ECCV and EMNLP 2026 now appear here in conference-date order; NeurIPS 2026 stays Upcoming while notification is pending. Local browser checks covered section membership and Algorithm filtering; Jekyll, HTMLProofer and diff checks passed. Screenshot: `docs/screenshots/conference-only.png`.

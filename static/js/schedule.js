@@ -41,7 +41,14 @@
   function phase(record) {
     const conference = record.events.find(e => e.kind === 'conference');
     if (conference.precision === 'tba') return 'Dates to be announced';
-    return (conference.end || conference.date.slice(0, 10)) < today() ? 'Past conferences' : 'Upcoming & ongoing';
+    if ((conference.end || conference.date.slice(0, 10)) < today()) return 'Past conferences';
+    const submission = record.events.find(e => e.kind === 'commitment') || record.events.find(e => e.kind === 'paper');
+    const notification = record.events.find(e => e.kind === 'notification');
+    const completed = event => event && event.precision !== 'tba' && !future(event);
+    if (completed(submission) && completed(notification) && !record.events.some(e => e.kind !== 'conference' && future(e))) {
+      return 'Conference only · submissions closed';
+    }
+    return 'Upcoming & ongoing';
   }
   function timer(event) {
     const element = node('span', '', 'countdown');
@@ -129,9 +136,9 @@
       content.append(node('p', 'Unannounced (TBA) milestones appear on each conference’s full schedule.'));
     } else {
       const filtered = selected();
-      ['Upcoming & ongoing', 'Dates to be announced', 'Past conferences'].forEach(group => {
+      ['Upcoming & ongoing', 'Conference only · submissions closed', 'Dates to be announced', 'Past conferences'].forEach(group => {
         const matches = filtered.filter(record => phase(record) === group);
-        if (group === 'Upcoming & ongoing') {
+        if (group === 'Upcoming & ongoing' || group === 'Conference only · submissions closed') {
           matches.sort((a, b) => {
             const aNext = nextEvent(a);
             const bNext = nextEvent(b);
