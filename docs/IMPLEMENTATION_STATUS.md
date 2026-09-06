@@ -79,3 +79,5 @@ The HTTPS Git token lacked workflow scope and SSH authentication was unavailable
 ## Upcoming ordering follow-up (2026-09-07)
 
 Upcoming & ongoing cards now sort by their next published milestone, earliest first, using the same event selection as the card's Next label. Ties use the conference ID; missing milestones sort last. Category filters retain this order. Local browser verification (all categories and Algorithm), Jekyll build, HTMLProofer and `git diff --check` passed. Screenshot: `docs/screenshots/upcoming-sorted.png`.
+
+Deployment of the ordering change succeeded in [Actions run #2](https://github.com/ojy0216/mms-deadlines/actions/runs/34047776843). The public site was reloaded and confirmed to begin ESSERC 2026 → ISSCC 2027 → ECCV 2026 → ICLR 2027, ordered by the Next milestone. The resulting automatic data commit was pulled with `--ff-only`.
