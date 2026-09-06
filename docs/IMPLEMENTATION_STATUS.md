@@ -1,53 +1,77 @@
 # Implementation and verification status
 
-Updated 2026-09-07. Local browser verification is complete. GitHub Pages source is now GitHub Actions; the initial commit/push and live deployment are the next steps.
+Updated 2026-09-07. Implementation, local visual verification, ordinary push and live GitHub Pages deployment are complete.
 
-## Implemented
+## Live deployment
 
-- Ten conference families, 2024 onward rolling window, and explicitly announced future editions. Latest collection contains 41 editions.
-- Official HTML/PDF collection, future-list discovery, event provenance, separate manual corrections, date/time precision, conflict preservation and isolated source failures.
-- Shared list/detail/calendar data, category/title/year filters, exact-time countdowns, local/official times, health reports and project-prefix links.
-- Generated JSON, aggregate ICS and 41 individual calendars. Latest verified build contains 107 published milestones.
-- Daily 00:00 KST workflow (updated at the user's request) with manual dispatch, validation/build before data commit, serialized ordinary push, and same-run explicit Pages deployment.
-- README covers setup, manual runs, data meaning, maintenance and recovery.
+- Site: https://ojy0216.github.io/mms-deadlines/
+- Successful run: https://github.com/ojy0216/mms-deadlines/actions/runs/34047195498
+- Job/logs: https://github.com/ojy0216/mms-deadlines/actions/runs/34047195498/job/101524260050
+- Implementation commit: `5984443`; pushed merge: `c9a9e72`; same-run automatic data commit: `d3d729e`.
+- Pages source is GitHub Actions, custom domain is empty, HTTPS is enforced.
+- Daily schedule is **00:00 KST**, cron **`0 15 * * *`**, with `workflow_dispatch` retained. GitHub scheduling may be delayed; configuration is not an exact-start guarantee.
+- Run #1 succeeded in 1m 15s. Logs show 41 collected editions, 30 passing tests, 107 published milestones in JSON and 42 ICS files, ordinary data push `c9a9e72..d3d729e`, and Pages `Reported success!`.
+- Artifact `9993470818` was built and deployed by the same execution after collection, validation, build and data commit. Failed validation/build/push blocks later deployment steps. `conference-pages` concurrency serializes executions without forced push.
 
-## Validation performed
+## Scope delivered
 
-- 30 Python regression tests passed, covering all ten families using 20 official HTML/PDF snapshots, precision/time zones, extension, conflicts, failed requests, duplicate input, repeatability, overrides and year rollover.
-- Jekyll build passed with local JSON/ICS generators enabled. `github-pages` must remain `require: false`; auto-loading it enables safe mode and suppresses those generators.
-- HTMLProofer passed, including the requested external-link command. It checks the three rendered HTML shells; dynamic conference source links are separately exercised by the collector.
-- `python -m utils.validate_site` passed: JSON/source equality, every published milestone, stable UIDs, aggregate/personal feed equality, UTC values, all-day exclusive end dates, CRLF/75-byte line folding and project-prefix URLs.
-- JavaScript syntax checked with Node.
+- Circuit: ISSCC, VLSI, CICC, ESSERC. Algorithm: NeurIPS, ICLR, ICML, EMNLP, ECCV, ICCV.
+- Rolling hosting-year window (current year and previous two years), plus officially announced future editions. URL-year substitution alone is not announcement evidence.
+- Official HTML/PDF collection and future-list discovery, per-event provenance, time precision, conflict preservation, isolated source failures and separate `_data/overrides.yml` corrections.
+- Abstract/paper submission, EMNLP ARR/commitment, notification, meeting dates and venue. Workshops and additional submission tracks are excluded. Separately labeled main-session dates are preferred; otherwise the advertised meeting interval is retained.
+- Shared list/detail/calendar/ICS data, category/conference/year filters, local and official times, precise-time-only countdowns, collection health and source links.
+- README documents setup, manual sync, missing data, source recovery and overrides. User-provided `AGENTS.md` is preserved.
 
-## Remaining verification and limitations
+## Verification evidence
 
-- Browser runtime setup succeeded but reported no available browser; documented discovery also returned an empty list. No visual/interactive checks or screenshots have been claimed. A local preview runs at http://127.0.0.1:4000/mms-deadlines/ while this session is active.
-- No commit, push or live deployment has been performed. GitHub connector confirms admin/push access and default branch `gh-pages`. Initial Pages source selection and a successful workflow/deployment still need verification.
-- Historical unavailable fields and future unannounced dates remain TBA with explicit review reasons. Inaccessible ESSERC 2025 and VLSI 2027 page values verified through official indexed pages are preserved in `_data/overrides.yml`, with sources and reasons.
-- CICC 2026 has a stale notification banner conflicting with its main review section; preserve the existing confirmed date and report the conflict.
-- Main meeting ranges use separately labeled main sessions where available; other sources supply their advertised conference interval. NeurIPS 2025 shows both officially advertised venues. The official Mexico City program was also checked: oral/poster sessions run December 3–5, agreeing with the stored main-conference interval. Source: https://neurips.cc/virtual/2025/loc/mexico-city/calendar .
-- Final requirement audit and browser/Pages verification remain necessary before marking the overall goal complete.
+All requested commands passed locally with the Ruby environment below:
 
-## Local runtime notes
+```sh
+.venv/bin/python -B -m utils.collector.sync --validate-only
+.venv/bin/python -B -m unittest discover -s tests
+bundle exec jekyll build --future
+.venv/bin/python -B -m utils.validate_site
+bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --url-ignore '/#.*/' --http-status-ignore '400,441' --url-swap '^/mms-deadlines/:/'
+git diff --check
+```
 
-The machine's system Ruby 2.6 reports a universal platform despite arm64 native gems. Local validation uses `/private/tmp/mms-ruby-platform.rb` through `RUBYOPT`, Bundler from `/private/tmp/mms-gems`, and ignored dependencies in `vendor/bundle`. CI instead uses Ruby 3.1 and Python 3.12. Local Python 3.9 emits a LibreSSL warning, but all reported checks passed.
+- All 30 tests also passed in Actions on Python 3.12. Twenty official HTML/PDF fixtures cover all ten families, precision/timezones, extensions, conflicting/failed sources, duplicate input, repeated runs, overrides and year rollover. Original fixture bytes and manifest SHA-256 hashes are preserved using `.gitattributes`.
+- JSON/source equality, all 107 published milestones, stable UIDs, aggregate/personal feed equality, UTC instants, all-day exclusive end dates, CRLF/75-byte folding and project-prefix URLs passed the generated-site validator.
+- HTMLProofer passed on all three HTML shells. Dynamic source access is separately exercised by the collector; external failures are listed below.
+- Local and public HTTP checks each verified **49 URLs** with status 200 and exact byte equality to the rebuilt latest data: three HTML pages, JSON, CSS, JavaScript, favicon, aggregate ICS and all 41 individual feeds.
+- Public pages displayed the Actions collection timestamp **2026-09-07 02:00:29 KST**. Public JSON/ICS matched Actions data commit `d3d729e`, proving newly collected data was included in the same-run deployment.
 
-The user-provided untracked `AGENTS.md` has been preserved. Extra downloaded research snapshots were moved to `/private/tmp/mms-unused-source-snapshots`; committed fixture candidates are listed with official URLs, retrieval date and SHA-256 in `tests/fixtures/raw/manifest.json`.
+## Browser checks
 
-## Follow-up audit
+- Used the current CUA Chrome connection with fresh discovery. The existing local server on port 4000 was reused. Shell sandbox restrictions initially made it appear unreachable; an unsandboxed check confirmed it, so no duplicate server was started.
+- Inspected desktop and 390px-wide list/detail/calendar. Screenshots: [desktop list](screenshots/list-desktop.png), [desktop detail](screenshots/detail-desktop.png), [desktop calendar](screenshots/calendar-desktop.png), [mobile list](screenshots/list-mobile.png), [mobile detail](screenshots/detail-mobile.png), [mobile calendar](screenshots/calendar-mobile.png), [deployed list](screenshots/deployed-list.png).
+- Verified Circuit/2027 and Algorithm/EMNLP/2026 filter combinations. EMNLP 2026 stays upcoming after submissions and notification have passed. Records separate into 11 upcoming/ongoing, 7 meeting-date-unannounced and 23 past editions at verification time.
+- ISSCC 2027 detail shows official timestamps, Asia/Seoul conversions and ticking countdowns. Date-only/TBA events have no countdown. EMNLP detail and calendar keep ARR and commitment distinct.
+- Expanded health shows attempt/success, source links and per-conference issues. At 390px viewport, expanded health had client/scroll widths of 375px with no horizontal overflow.
+- Fixed CSS overriding the detail filter's `hidden` attribute and wrapped long health errors/URLs. Explicit ICS download attributes prevent navigating away. Aggregate and individual download events succeeded locally and publicly. Public list, filtered detail and calendar showed no console errors.
 
-### Browser and pre-deployment verification (2026-09-07)
+## Remaining official-data limitations
 
-- Connected Chrome through the currently available CUA browser API. The existing local server responds on port 4000 outside the shell sandbox; an initial sandbox request incorrectly appeared unavailable. A second server was not started because the port was already occupied.
-- Verified list, detail and calendar, category/conference/year filter combinations, 11 upcoming/ongoing, 7 date-unannounced and 23 past editions. EMNLP 2026 remains upcoming after ARR/commitment/notification have passed.
-- Confirmed ISSCC 2027 precise countdowns show official and Asia/Seoul times; date-only and TBA events have no countdown. Expanded collection health shows attempt/success times, official source links and preserved-value errors.
-- Fixed CSS overriding the detail filters' hidden attribute and wrapped long health URLs/errors for narrow screens. Added explicit download attributes to ICS links; both aggregate and individual browser download events succeeded with no console errors.
-- Inspected desktop and 390px-wide list/detail/calendar; screenshots are in `docs/screenshots/`. Expanded mobile health has no horizontal overflow (client width and scroll width both 375px).
-- Re-ran data validation, all 30 Python tests, Jekyll build, generated JSON/42 ICS checks (107 milestones), requested HTMLProofer command and whitespace checks successfully.
-- Saved GitHub Pages source as GitHub Actions, with no custom domain. Remote `gh-pages` and local HEAD matched `b230d24719088a769e6938704a826e5084b4cb34` before committing. No forced push is used.
+The 41 editions contain **107 published** and **57 TBA milestones**, with 23 editions flagged for review. These are explicit source limitations, not inferred dates.
 
-### Earlier diagnostics
+- Meeting dates remain TBA for ICCV 2027/2029/2031, NeurIPS 2027/2028 and ICML 2027/2028. These future editions have official announcement evidence.
+- Venue remains TBA for CICC 2024 and ICCV 2029. CICC 2024's additional official overview PDF returned HTTP 403 during historical backfill.
+- VLSI 2027 source `https://dev.vlsisymposium.org/` returns HTTP 401. Its verified deadline is preserved in the override.
+- ESSERC 2025 source `https://www.esserc2025.org/papers` refuses connections. Previously verified paper/notification values remain in overrides with official URLs and reasons.
+- CICC 2026 official notification sources conflict; the previous confirmed value is preserved and marked for review.
+- Other unavailable historical or unannounced milestones remain TBA; detail pages and `_data/sync_status.yml` identify them. NeurIPS 2025 retains both officially advertised venues; its official Mexico City program confirms December 3–5 main sessions.
+- Actions emitted a non-blocking Node 20 action-runtime deprecation notice while successfully running under Node 24. No security setting was weakened.
 
-Browser discovery was rechecked and still returned an empty list. No browser verification or deployment was claimed. CICC 2024’s additional official overview PDF returned HTTP 403 during the venue backfill attempt, so its missing venue remains explicitly marked TBA. Added regression tests confirm that TBA cannot erase a published deadline, a partial source failure preserves only the affected field while other fields update, and an older CFP cannot reverse a confirmed extension. All 30 tests passed; `git diff --check` passed.
+## Local runtime and publication notes
 
-Local HTTP verification after the localhost request: all 48 checked page, asset and calendar URLs returned HTTP 200. Every served ICS matched the corresponding validated `_site` bytes. Browser discovery still returned no connected browsers; HTTP checks do not prove rendered UI behavior.
+System Ruby 2.6 reports a universal platform despite arm64 native gems. Local commands use:
+
+```sh
+GEM_HOME=/private/tmp/mms-gems GEM_PATH=/private/tmp/mms-gems \
+RUBYOPT=-r/private/tmp/mms-ruby-platform.rb \
+/private/tmp/mms-gems/bin/bundle exec jekyll build --future
+```
+
+The platform helper sets `Gem::Platform.local` to `arm64-darwin-25`. Dependencies are ignored in `vendor/bundle`. Local Python 3.9 emits a LibreSSL warning; CI uses Ruby 3.1/Python 3.12 and passes. Keep `github-pages` as `require: false`: auto-loading enables safe mode and skips the local JSON/ICS generator.
+
+The HTTPS Git token lacked workflow scope and SSH authentication was unavailable. The same verified workflow was registered through the already-authenticated web editor (`aa4a249`, initial registration skipped CI), merged locally without content changes, then the full implementation was pushed normally. No token permission expansion, forced push, reset or loss of existing changes was used. The Actions data commit was pulled with `--ff-only` for final public verification.
