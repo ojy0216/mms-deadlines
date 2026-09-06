@@ -1,0 +1,33 @@
+# Source-reviewed corrections for currently inaccessible official pages.
+esserc25:
+  events:
+    paper:
+      date: '2025-04-11 23:59:00'
+      precision: datetime
+      timezone: UTC-05
+      sources:
+      - https://www.esserc2025.org/papers
+      checked_at: '2026-09-06T16:24:10Z'
+      reason: Official indexed paper-submission page explicitly announces NEW deadline. Direct historical host is unavailable;
+        retain extension over original CFP.
+      extended: true
+    notification:
+      date: '2025-05-28 23:59:00'
+      precision: datetime
+      timezone: UTC-05
+      sources:
+      - https://www.esserc2025.org/papers
+      checked_at: '2026-09-06T16:24:10Z'
+      reason: Official indexed paper-submission page supplies clock and UTC offset absent from original CFP. Direct historical
+        host is unavailable.
+vlsi27:
+  events:
+    paper:
+      date: '2027-01-25 23:59:00'
+      precision: datetime
+      timezone: Asia/Tokyo
+      sources:
+      - https://dev.vlsisymposium.org/
+      checked_at: '2026-09-06T16:24:10Z'
+      reason: Official indexed 2027 homepage announces this deadline; direct site currently returns 401. Remove override after
+        direct collection works.

@@ -1,25 +1,7 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<title>{{ site.title }}</title>
-<meta name="description" content="{{ site.description }}">
-<meta name="author" content="{{ site.author }}">
-<link rel="stylesheet" type="text/css" href="{{ "/static/css/js-year-calendar.min.css" | prepend:site.baseurl }}?t={{site.time | date: '%s' }}" media="screen,projection">
-
-<link rel="stylesheet" type="text/css" href="{{ "/static/css/bootstrap.min.css" | prepend:site.baseurl }}">
-<link rel="stylesheet" type="text/css" href="{{ "/static/css/deadlines.css" | prepend:site.baseurl }}?t={{site.time | date: '%s'}}" media="screen,projection">
-<link rel="stylesheet" type="text/css" href="{{ "/static/css/calendar.css" | prepend:site.baseurl }}?t={{site.time | date: '%s'}}" media="screen,projection">
-
-<link rel="shortcut icon" href="{{ "/static/img/favicon.png" | prepend:site.baseurl }}">
-
-<script type="text/javascript" src="{{ "/static/js/js-year-calendar.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/jquery.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/popper.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/bootstrap.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/jquery.countdown.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/moment.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/moment-timezone-with-data.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/store.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/ouical.min.js" | prepend:site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/static/js/bootstrap-multiselect.min.js" |prepend:site.baseurl }}"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.title | escape }}</title>
+<meta name="description" content="{{ site.description | escape }}">
+<link rel="icon" href="{{ '/static/img/favicon.svg' | relative_url }}">
+<link rel="stylesheet" href="{{ '/static/css/schedule.css' | relative_url }}">
+<script defer src="{{ '/static/js/schedule.js' | relative_url }}"></script>

@@ -1,0 +1,2 @@
+# Official regression snapshots retain their original bytes and manifest hashes.
+tests/fixtures/raw/* -text -whitespace

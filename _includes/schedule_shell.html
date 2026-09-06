@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>{% include head.html %}</head>
+<body data-base="{{ site.baseurl }}" data-view="{{ page.view }}">
+  {% include header.html %}
+  <main>
+    <div class="eyebrow">CIRCUIT / ALGORITHM</div>
+    <h1>{{ page.heading }}</h1>
+    <p class="intro">Ten conferences. Official dates, clear time zones, and the next milestone.</p>
+    <div id="sync-status" class="status" aria-live="polite">Loading collection status…</div>
+    <section id="filters" class="filters" aria-label="Conference filters">
+      <label>Category<select id="category"><option value="">All categories</option><option>Circuit</option><option>Algorithm</option></select></label>
+      <label>Conference<select id="conference"><option value="">All conferences</option></select></label>
+      <label>Year<select id="year"><option value="">All years</option></select></label>
+      <button id="reset" type="button">Reset filters</button>
+    </section>
+    <div id="content" aria-live="polite"><p>Loading official schedules…</p></div>
+    <noscript>Enable JavaScript to view schedules, filter conferences, and display your local time. Calendar downloads remain available above.</noscript>
+    <details class="collection-health"><summary>Collection health &amp; official sources</summary><div id="health"></div></details>
+  </main>
+  <footer>{% include footer.html %}</footer>
+</body>
+</html>

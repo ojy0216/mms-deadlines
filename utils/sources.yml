@@ -1,0 +1,509 @@
+- title: NeurIPS
+  hosts:
+  - neurips.cc
+  discovery:
+  - https://neurips.cc/
+  parser: eventhosts
+  editions:
+    2024:
+      link: https://neurips.cc/Conferences/2024
+      evidence: https://neurips.cc/Conferences/2024/Dates
+      sources:
+      - url: https://neurips.cc/Conferences/2024/Dates
+        parser: eventhosts
+      - url: https://neurips.cc/Conferences/2024
+        identity: NeurIPS 2024
+        venue_pattern: Neural Information Processing Systems (?P<place>Vancouver Convention Center)
+    2025:
+      link: https://neurips.cc/Conferences/2025
+      evidence: https://neurips.cc/Conferences/2025/Dates
+      sources:
+      - url: https://neurips.cc/Conferences/2025/Dates
+        parser: eventhosts
+      - url: https://neurips.cc/Conferences/2025
+        identity: NeurIPS 2025
+        venue_pattern: (?P<place>San Diego, CA|Mexico City, MX) (?:Dec|Nov)
+        venue_multiple: true
+    2026:
+      link: https://neurips.cc/Conferences/2026
+      evidence: https://neurips.cc/Conferences/2026/Dates
+      sources:
+      - url: https://neurips.cc/Conferences/2026/Dates
+        parser: eventhosts
+  announcements:
+  - url: https://neurips.cc/Conferences/FutureMeetings
+    parser: future_meetings
+- title: ICLR
+  hosts:
+  - iclr.cc
+  discovery:
+  - https://iclr.cc/
+  parser: eventhosts
+  editions:
+    2024:
+      link: https://iclr.cc/Conferences/2024
+      evidence: https://iclr.cc/Conferences/2024/Dates
+      sources:
+      - url: https://iclr.cc/Conferences/2024/Dates
+        parser: eventhosts
+      - url: https://iclr.cc/Conferences/2024
+        identity: ICLR 2024
+        venue_pattern: Learning Representations (?P<place>Messe Wien Exhibition and Congress Center\s*,\s*Vienna Austria)
+      - url: https://iclr.cc/Conferences/2024/CallForPapers
+        identity: ICLR 2024
+        rules:
+        - kind: notification
+          pattern: Final decisions:\s*(?P<date>Jan 15 2024)
+    2025:
+      link: https://iclr.cc/Conferences/2025
+      evidence: https://iclr.cc/Conferences/2025/Dates
+      sources:
+      - url: https://iclr.cc/Conferences/2025/Dates
+        parser: eventhosts
+      - url: https://iclr.cc/Conferences/2025
+        identity: ICLR 2025
+        venue_pattern: Learning Representations (?P<place>Singapore EXPO)
+    2026:
+      link: https://iclr.cc/Conferences/2026
+      evidence: https://iclr.cc/Conferences/2026/Dates
+      sources:
+      - url: https://iclr.cc/Conferences/2026/Dates
+        parser: eventhosts
+      - url: https://iclr.cc/Conferences/2026
+        identity: ICLR 2026
+        venue_pattern: Learning Representations Schedule (?P<place>Rio de Janeiro, Brazil)
+    2027:
+      link: https://iclr.cc/Conferences/2027
+      evidence: https://iclr.cc/Conferences/2027/Dates
+      sources:
+      - url: https://iclr.cc/Conferences/2027/Dates
+        parser: eventhosts
+      - url: https://iclr.cc/Conferences/2027
+        identity: ICLR 2027
+        venue_pattern: Learning Representations (?P<place>California)
+- title: ICML
+  hosts:
+  - icml.cc
+  discovery:
+  - https://icml.cc/
+  parser: eventhosts
+  editions:
+    2024:
+      link: https://icml.cc/Conferences/2024
+      evidence: https://icml.cc/Conferences/2024/Dates
+      sources:
+      - url: https://icml.cc/Conferences/2024/Dates
+        parser: eventhosts
+      - url: https://icml.cc/Conferences/2024
+        identity: ICML 2024
+        venue_pattern: Machine Learning @ (?P<place>Messe Wien Exhibition Congress Center, Vienna, Austria)
+    2025:
+      link: https://icml.cc/Conferences/2025
+      evidence: https://icml.cc/Conferences/2025/Dates
+      sources:
+      - url: https://icml.cc/Conferences/2025/Dates
+        parser: eventhosts
+      - url: https://icml.cc/Conferences/2025
+        identity: ICML 2025
+        venue_pattern: Machine Learning (?P<place>Vancouver Convention Center)
+    2026:
+      link: https://icml.cc/Conferences/2026
+      evidence: https://icml.cc/Conferences/2026/Dates
+      sources:
+      - url: https://icml.cc/Conferences/2026/Dates
+        parser: eventhosts
+      - url: https://icml.cc/Conferences/2026
+        identity: ICML 2026
+        venue_pattern: Machine Learning (?P<place>Seoul, South Korea)
+  announcements:
+  - url: https://icml.cc/Conferences/FutureMeetings
+    parser: future_meetings
+- title: ECCV
+  hosts:
+  - eccv.ecva.net
+  discovery:
+  - https://eccv.ecva.net/
+  parser: eventhosts
+  editions:
+    2024:
+      link: https://eccv.ecva.net/Conferences/2024
+      evidence: https://eccv.ecva.net/Conferences/2024/Dates
+      sources:
+      - url: https://eccv.ecva.net/Conferences/2024/Dates
+        parser: eventhosts
+      - url: https://www.thecvf.com/?page_id=100
+        parser: cvf_venue
+    2026:
+      link: https://eccv.ecva.net/Conferences/2026
+      evidence: https://eccv.ecva.net/Conferences/2026/Dates
+      sources:
+      - url: https://eccv.ecva.net/Conferences/2026/Dates
+        parser: eventhosts
+      - url: https://www.thecvf.com/?page_id=100
+        parser: cvf_venue
+  announcements:
+  - url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue
+- title: ICCV
+  hosts:
+  - iccv.thecvf.com
+  discovery:
+  - https://iccv.thecvf.com/
+  parser: eventhosts
+  editions:
+    2025:
+      link: https://iccv.thecvf.com/Conferences/2025
+      evidence: https://iccv.thecvf.com/Conferences/2025/Dates
+      sources:
+      - url: https://iccv.thecvf.com/Conferences/2025/Dates
+        parser: eventhosts
+      - url: https://www.thecvf.com/?page_id=100
+        parser: cvf_venue
+  announcements:
+  - url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue
+- title: ISSCC
+  hosts:
+  - www.isscc.org
+  - submissions.mirasmart.com
+  discovery:
+  - https://www.isscc.org/
+  - https://www.isscc.org/past-conferences
+  editions:
+    2026:
+      link: https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
+      evidence: https://www.isscc.org/
+      sources:
+      - url: https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
+        identity: ISSCC 2026 CALL FOR PAPERS
+        rules:
+        - kind: paper
+          pattern: Deadline for Electronic Submission of Papers:\s*(?P<date>Wednesday, September \d+, 20\d\d\s*•\s*3:00 PM)
+            Eastern Daylight Time
+          timezone: America/New_York
+        - kind: conference
+          range: true
+          pattern: SUNDAY-THURSDAY, (?P<date>FEBRUARY \d+-\d+, 20\d\d) (?P<place>SAN FRANCISCO MARRIOTT MARQUIS, SAN FRANCISCO,
+            CA)
+        - kind: abstract
+          pattern: The abstract and manuscript must be submitted by (?P<date>September \d+, 20\d\d at 3pm EDT)
+        - kind: notification
+          pattern: Authors will be notified of acceptance by (?P<date>October \d+, 2025)
+        format: pdf
+    2027:
+      link: https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027CFP.pdf
+      evidence: https://www.isscc.org/
+      sources:
+      - url: https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027CFP.pdf
+        identity: ISSCC 2027 CALL FOR PAPERS
+        rules: &id004
+        - &id001
+          kind: paper
+          pattern: Deadline for Electronic Submission of Papers:\s*(?P<date>Wednesday, September \d+, 20\d\d\s*•\s*3:00 PM)
+            Eastern Daylight Time
+          timezone: America/New_York
+        - &id002
+          kind: conference
+          range: true
+          pattern: SUNDAY-THURSDAY, (?P<date>FEBRUARY \d+-\d+, 20\d\d) (?P<place>SAN FRANCISCO MARRIOTT MARQUIS, SAN FRANCISCO,
+            CA)
+        - &id003
+          kind: abstract
+          pattern: The abstract and manuscript must be submitted by (?P<date>September \d+, 20\d\d at 3pm EDT)
+        format: pdf
+      - url: https://www.isscc.org/paper-submission-26
+        identity: ISSCC 2027
+        rules:
+        - kind: notification
+          pattern: Authors are notified by (?P<date>October \d+, 2026)
+    2024:
+      link: https://www.isscc.org/past-conferences
+      evidence: https://events.vtools.ieee.org/m/371293
+      sources:
+      - url: https://events.vtools.ieee.org/m/371293
+        identity: ISSCC 2024
+        rules:
+        - kind: paper
+          pattern: paper submission deadline is\s*(?P<date>Wednesday, September 6, 2023, 3:00 PM ET)
+      - url: https://www.isscc.org/s/ISSCC2024AdvanceProgram-Final.pdf
+        format: pdf
+        identity: 2024 IEEE INTERNATIONAL SOLID-STATE CIRCUITS CONFERENCE
+        rules:
+        - kind: conference
+          range: true
+          pattern: 'CONFERENCE (?P<date>FEBRUARY 18, 19, 20, 21, 22) CONFERENCE THEME: ICS FOR A BETTER WORLD (?P<place>SAN
+            FRANCISCO MARRIOTT MARQUIS HOTEL)'
+    2025:
+      link: https://www.isscc.org/past-conferences
+      evidence: https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
+      sources:
+      - url: https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
+        format: pdf
+        identity: ISSCC 2025
+        rules:
+        - *id001
+        - *id002
+        - *id003
+        - kind: notification
+          pattern: Authors will be notified of acceptance by (?P<date>October \d+, 2024)
+  discovered_pdf:
+    rules: *id004
+- title: VLSI
+  hosts:
+  - www.vlsisymposium.org
+  - archive.vlsisymposium.org
+  - dev.vlsisymposium.org
+  discovery:
+  - https://www.vlsisymposium.org/
+  editions:
+    2024:
+      link: https://archive.vlsisymposium.org/24web/
+      evidence: https://archive.vlsisymposium.org/24web/call-for-papers/
+      sources:
+      - url: https://archive.vlsisymposium.org/24web/call-for-papers/
+        identity: 2024 IEEE Symposium on VLSI
+        rules:
+        - kind: paper
+          pattern: up until the submission deadline, (?P<date>Monday, February \d+, 2024 \d+:\d+ PST)
+      - url: https://archive.vlsisymposium.org/24web/
+        identity: '2024'
+        rules:
+        - kind: conference
+          range: true
+          pattern: (?P<place>HILTON HAWAIIAN VILLAGE HONOLULU, HAWAII) (?P<date>JUNE 16-20, 2024)
+    2025:
+      link: https://archive.vlsisymposium.org/25web/index.html
+      evidence: https://archive.vlsisymposium.org/25web/index.html
+      sources:
+      - url: https://archive.vlsisymposium.org/25web/index.html
+        identity: 2025 Symposium
+        rules:
+        - kind: paper
+          pattern: (?P<date>January \d+, 2025) Paper Submission Deadline 11:59 P.M. JST
+          timezone: Asia/Tokyo
+          deadline_time: '23:59:00'
+        - kind: conference
+          range: true
+          pattern: (?P<place>Rihga Royal Hotel Kyoto, Japan) Sunday–Thursday, (?P<date>June 8–12, 2025)
+    2026:
+      link: https://www.vlsisymposium.org/
+      evidence: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf
+      sources:
+      - url: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf
+        identity: 2026 IEEE/JSAP Symposium on VLSI
+        rules:
+        - kind: paper
+          pattern: deadline for paper submissions is (?P<date>January \d+, 2026 at \d+:\d+ PST)
+        - kind: conference
+          range: true
+          pattern: held at the (?P<place>Hilton Hawaiian Village, Honolulu, HI), from (?P<date>June 14 – 18, 2026)
+        format: pdf
+    2027:
+      link: https://dev.vlsisymposium.org/
+      evidence: https://www.vlsisymposium.org/future-symposia/
+      sources:
+      - url: https://www.vlsisymposium.org/future-symposia/
+        parser: vlsi_future
+      - url: https://dev.vlsisymposium.org/
+        identity: 2027 Symposium on VLSI
+        rules:
+        - kind: paper
+          pattern: (?P<date>January \d+, 2027) Paper Submission Deadline 11:59 P.M. JST
+          timezone: Asia/Tokyo
+          deadline_time: '23:59:00'
+  announcements:
+  - url: https://www.vlsisymposium.org/future-symposia/
+    parser: vlsi_future
+- title: CICC
+  hosts:
+  - www.ieee-cicc.org
+  discovery:
+  - https://www.ieee-cicc.org/
+  editions:
+    2025:
+      link: https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
+      evidence: https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
+      sources:
+      - url: https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
+        identity: CICC 2025|2025.?CICC
+        rules:
+        - kind: paper
+          pattern: FIRM DEADLINE for paper submission is 11:59 pm (?:Eastern Time|PT) on (?P<date>(?:November \d+, 20\d\d|\d+
+            November 20\d\d))
+          timezone: America/New_York
+          deadline_time: '23:59:00'
+        - kind: notification
+          pattern: notified by email by (?P<date>(?:January \d+, 20\d\d|\d+ January 20\d\d))
+        - kind: conference
+          range: true
+          pattern: (?P<date>April \d+ – \d+, 20\d\d) – (?P<place>[^.]+?, [A-Z]{2}, USA)
+    2027:
+      link: https://www.ieee-cicc.org/2027-call-for-papers/
+      evidence: https://www.ieee-cicc.org/2027-call-for-papers/
+      sources:
+      - url: https://www.ieee-cicc.org/2027-call-for-papers/
+        identity: CICC 2027|2027.?CICC
+        rules:
+        - kind: paper
+          pattern: FIRM DEADLINE for paper submission is 11:59 pm (?:Eastern Time|PT) on (?P<date>(?:November \d+, 20\d\d|\d+
+            November 20\d\d))
+          timezone: America/Los_Angeles
+          deadline_time: '23:59:00'
+        - kind: notification
+          pattern: notified by email by (?P<date>(?:January \d+, 20\d\d|\d+ January 20\d\d))
+        - kind: conference
+          range: true
+          pattern: (?P<date>April \d+ – \d+, 20\d\d) – (?P<place>[^.]+?, [A-Z]{2}, USA)
+    2026:
+      link: https://www.ieee-cicc.org/2026-cicc-author-submission-guidelines/
+      evidence: https://www.ieee-cicc.org/2026-cicc-author-submission-guidelines/
+      sources:
+      - url: https://www.ieee-cicc.org/2026-cicc-author-submission-guidelines/
+        identity: CICC 2026|2026.?CICC
+        rules:
+        - kind: paper
+          pattern: FIRM deadline of (?P<date>Monday, \d+ November 2025, 11:59pm PT)
+        - kind: notification
+          pattern: will be made by (?P<date>\d+ January 2026)
+        - kind: notification
+          pattern: Author notices have been sent to all authors on (?P<date>\d+ January 20\d\d)
+      - url: https://www.ieee-cicc.org/wp-content/uploads/2025/09/CICC-2026-Call-for-Papers_FINAL.pdf
+        format: pdf
+        identity: IEEE CICC 2026
+        rules:
+        - kind: conference
+          range: true
+          pattern: (?P<date>April 19 – 23, 2026) – (?P<place>Seattle, WA, USA)
+    2024:
+      link: https://www.ieee-cicc.org/wp-content/uploads/2024/04/CICC-2024_Program-4-2-24.pdf
+      evidence: https://www.ieee-cicc.org/wp-content/uploads/2024/04/CICC-2024_Program-4-2-24.pdf
+      sources:
+      - url: https://www.ieee-cicc.org/wp-content/uploads/2024/04/CICC-2024_Program-4-2-24.pdf
+        format: pdf
+        identity: 2024 IEEE Custom Integrated Circuits Conference
+        rules:
+        - kind: conference
+          range: true
+          pattern: 2024 IEEE Custom Integrated Circuits Conference \(CICC\) (?P<date>21 - 24 Apr 2024)
+- title: ESSERC
+  hosts:
+  - www.esserc2026.org
+  - www.esserc.org
+  - www.esserc2027.org
+  - www.esserc2028.org
+  - ieee-cas.org
+  discovery:
+  - https://www.esserc.org/
+  - https://www.esserc2026.org/
+  editions:
+    2024:
+      link: https://www.esserc.org/
+      evidence: https://ieee-cas.org/files/ieeecass/2024-02/ESSERC-2024_Call%20for%20Papers.pdf
+      sources:
+      - url: https://ieee-cas.org/files/ieeecass/2024-02/ESSERC-2024_Call%20for%20Papers.pdf
+        identity: ESSERC2024
+        rules:
+        - kind: paper
+          pattern: PAPERS SUBMISSION DEADLINE:\s*(?P<date>APRIL \d+, 20\d\d)
+        - kind: notification
+          pattern: by e-mail by (?P<date>(?:\d+ May 20\d\d|May \d+, 20\d\d))
+        - kind: conference
+          range: true
+          pattern: (?P<date>\d+-\d+ September 2024) (?P<place>[A-Z]+ \([A-Za-z]+\))
+        format: pdf
+    2025:
+      link: https://www.esserc.org/
+      evidence: https://ieee-cas.org/files/ieeecass/2025-01/ESSERC-2025_CallForPapers.pdf
+      sources:
+      - url: https://ieee-cas.org/files/ieeecass/2025-01/ESSERC-2025_CallForPapers.pdf
+        identity: ESSERC2025
+        rules:
+        - kind: paper
+          pattern: PAPERS SUBMISSION DEADLINE:\s*(?P<date>APRIL \d+, 20\d\d)
+        - kind: notification
+          pattern: by e-mail by (?P<date>(?:\d+ May 20\d\d|May \d+, 20\d\d))
+        - kind: conference
+          range: true
+          pattern: (?P<date>\d+-\d+ September 2025) (?P<place>[A-Z]+ \([A-Za-z]+\))
+        format: pdf
+      - url: https://www.esserc2025.org/papers
+        identity: ESSERC 2025
+        rules:
+        - kind: paper
+          pattern: NEW Submission deadline:\s*(?P<date>April \d+, 2025 23:59) \(UTC -0500\)
+          timezone: UTC-05
+          extended: true
+    2026:
+      link: https://www.esserc2026.org/
+      evidence: https://www.esserc2026.org/papers
+      sources:
+      - url: https://www.esserc2026.org/papers
+        identity: ESSERC 2026
+        rules:
+        - kind: paper
+          pattern: New Submission deadline:\s*(?P<date>Apr \d+, 20\d\d \d+:\d+) \(UTC -0500\)
+          timezone: UTC-05
+          extended: true
+        - kind: notification
+          pattern: Decision notification:\s*(?P<date>May \d+, 20\d\d \d+:\d+) \(UTC -0500\)
+          timezone: UTC-05
+      - url: https://www.esserc.org/
+        parser: esserc_future
+        dates_selector: '#comp-lezhdn2a'
+        places_selector: '#comp-lezhg2rz'
+  announcements:
+  - url: https://www.esserc.org/
+    parser: esserc_future
+    dates_selector: '#comp-lezhdn2a'
+    places_selector: '#comp-lezhg2rz'
+- title: EMNLP
+  hosts:
+  - 2024.emnlp.org
+  - 2025.emnlp.org
+  - 2026.emnlp.org
+  - www.emnlp.org
+  discovery:
+  - https://2026.emnlp.org/
+  editions:
+    2024:
+      link: https://2024.emnlp.org/
+      evidence: https://2024.emnlp.org/calls/main_conference_papers/
+      sources:
+      - url: https://2024.emnlp.org/calls/main_conference_papers/
+        parser: emnlp
+        identity: EMNLP 2024
+      - url: https://2024.emnlp.org/
+        identity: EMNLP 2024
+        venue_pattern: (?:took place|will be held) in (?P<place>Miami, Florida) from
+    2025:
+      link: https://2025.emnlp.org/
+      evidence: https://2025.emnlp.org/calls/main_conference_papers/
+      sources:
+      - url: https://2025.emnlp.org/calls/main_conference_papers/
+        parser: emnlp
+        identity: EMNLP 2025
+        exclude_kinds:
+        - conference
+        note: The CFP range includes workshops; main meeting days come from the official program.
+      - url: https://2025.emnlp.org/
+        identity: EMNLP 2025
+        venue_pattern: (?:took place|will be held) in (?P<place>Suzhou, China) from
+      - url: https://2025.emnlp.org/program/
+        parser: emnlp_program
+        identity: EMNLP 2025
+    2026:
+      link: https://2026.emnlp.org/
+      evidence: https://2026.emnlp.org/calls/main_conference_papers/
+      sources:
+      - url: https://2026.emnlp.org/calls/main_conference_papers/
+        parser: emnlp
+        identity: EMNLP 2026
+        exclude_kinds:
+        - conference
+        note: The CFP range includes workshops; main meeting days come from the official program.
+      - url: https://2026.emnlp.org/
+        identity: EMNLP 2026
+        venue_pattern: (?:took place|will be held) in (?P<place>Budapest, Hungary) from
+      - url: https://2026.emnlp.org/program/
+        parser: emnlp_program
+        identity: EMNLP 2026

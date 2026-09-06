@@ -1,15 +1,11 @@
-title: AI Conference Deadlines
-description: Countdowns to top CV/NLP/ML/Robotics/AI conference deadlines
-author: Abhishek Das
-
-domain: "aideadlin.es"
-baseurl: ""
-
-twitter_hashtag: machinelearning
-github_username: paperswithcode
-github_repo: ai-deadlines
-
+title: Circuit / Algorithm Deadlines
+description: Official conference schedules for circuits and algorithms
+author: MMS
+url: "https://ojy0216.github.io"
+domain: "ojy0216.github.io"
+baseurl: "/mms-deadlines"
+github_username: ojy0216
+github_repo: mms-deadlines
 markdown: kramdown
-ga_id:
-
 include: ['_pages']
+exclude: ['vendor', '.venv', 'utils', 'tests', 'docs', 'AGENTS.md', 'Gemfile', 'Gemfile.lock', 'README.md']
