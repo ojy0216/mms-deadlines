@@ -75,3 +75,7 @@ RUBYOPT=-r/private/tmp/mms-ruby-platform.rb \
 The platform helper sets `Gem::Platform.local` to `arm64-darwin-25`. Dependencies are ignored in `vendor/bundle`. Local Python 3.9 emits a LibreSSL warning; CI uses Ruby 3.1/Python 3.12 and passes. Keep `github-pages` as `require: false`: auto-loading enables safe mode and skips the local JSON/ICS generator.
 
 The HTTPS Git token lacked workflow scope and SSH authentication was unavailable. The same verified workflow was registered through the already-authenticated web editor (`aa4a249`, initial registration skipped CI), merged locally without content changes, then the full implementation was pushed normally. No token permission expansion, forced push, reset or loss of existing changes was used. The Actions data commit was pulled with `--ff-only` for final public verification.
+
+## Upcoming ordering follow-up (2026-09-07)
+
+Upcoming & ongoing cards now sort by their next published milestone, earliest first, using the same event selection as the card's Next label. Ties use the conference ID; missing milestones sort last. Category filters retain this order. Local browser verification (all categories and Algorithm), Jekyll build, HTMLProofer and `git diff --check` passed. Screenshot: `docs/screenshots/upcoming-sorted.png`.

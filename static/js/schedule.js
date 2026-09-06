@@ -35,6 +35,9 @@
     return event.precision === 'datetime' ? Date.parse(event.utc) > Date.now() : event.precision === 'date' && (event.end || event.date) >= today();
   }
   function sortKey(event) { return event.utc || event.date; }
+  function nextEvent(record) {
+    return record.events.filter(future).sort((a, b) => sortKey(a).localeCompare(sortKey(b)))[0];
+  }
   function phase(record) {
     const conference = record.events.find(e => e.kind === 'conference');
     if (conference.precision === 'tba') return 'Dates to be announced';
@@ -69,7 +72,7 @@
     const heading = node('h3');
     heading.append(link(`${record.title} ${record.year}`, `${base}/conference/?id=${encodeURIComponent(record.id)}`));
     element.append(heading, node('div', `${record.date} · ${record.place}`, 'meta'));
-    const next = record.events.filter(future).sort((a, b) => sortKey(a).localeCompare(sortKey(b)))[0];
+    const next = nextEvent(record);
     const milestone = node('div', undefined, 'milestone');
     if (next) {
       milestone.append(node('strong', `Next: ${labels[next.kind]}`), node('div', dateLabel(next), 'meta'), node('div', localLabel(next), 'meta'), timer(next));
@@ -128,6 +131,13 @@
       const filtered = selected();
       ['Upcoming & ongoing', 'Dates to be announced', 'Past conferences'].forEach(group => {
         const matches = filtered.filter(record => phase(record) === group);
+        if (group === 'Upcoming & ongoing') {
+          matches.sort((a, b) => {
+            const aNext = nextEvent(a);
+            const bNext = nextEvent(b);
+            return (aNext ? sortKey(aNext) : '9999').localeCompare(bNext ? sortKey(bNext) : '9999') || a.id.localeCompare(b.id);
+          });
+        }
         if (!matches.length) return;
         content.append(node('h2', `${group} · ${matches.length}`));
         const grid = node('div', undefined, 'grid');
