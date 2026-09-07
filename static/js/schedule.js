@@ -61,13 +61,44 @@
       element.textContent = `${Math.floor(remaining / 86400)}d ${Math.floor(remaining / 3600) % 24}h ${Math.floor(remaining / 60) % 60}m ${remaining % 60}s`;
     });
   }
-  function eventView(event) {
+  function mostRecentCompleted(record) {
+    const currentDate = today();
+    // Search the full dataset, independently of the visible filters.
+    return records.filter(candidate => {
+      const conference = candidate.events.find(event => event.kind === 'conference');
+      return candidate.title === record.title && Number(candidate.year) < Number(record.year) &&
+        conference && conference.precision !== 'tba' &&
+        (conference.end || conference.date.slice(0, 10)) < currentDate;
+    }).sort((a, b) => Number(b.year) - Number(a.year))[0];
+  }
+  function historicalReference(record, fullSchedule) {
+    if (phase(record) !== 'Dates to be announced') return null;
+    const reference = node('section', undefined, 'historical-reference');
+    reference.setAttribute('aria-label', 'Historical schedule reference');
+    reference.append(node('p', 'Historical reference only · Current edition dates are TBA', 'meta'));
+    const previous = mostRecentCompleted(record);
+    if (!previous) {
+      reference.append(node('p', 'No previous completed edition available'));
+      return reference;
+    }
+    const heading = node(fullSchedule ? 'h2' : 'h4');
+    heading.append(link(`Most recent completed edition · ${previous.title} ${previous.year}`, `${base}/conference/?id=${encodeURIComponent(previous.id)}`));
+    reference.prepend(heading);
+    if (fullSchedule) {
+      reference.append(link('Official website ↗', previous.link));
+      previous.events.forEach(event => reference.append(eventView(event, true)));
+    } else {
+      reference.append(node('p', dateLabel(previous.events.find(event => event.kind === 'conference'))));
+    }
+    return reference;
+  }
+  function eventView(event, historical = false) {
     const element = node('div', undefined, 'event');
     element.append(node('h3', labels[event.kind]), node('p', `Official: ${dateLabel(event)}`));
     if (event.precision !== 'tba') element.append(node('p', localLabel(event), 'meta'));
     if (event.place) element.append(node('p', event.place));
     if (event.unresolved_time) element.append(node('p', `Published time: ${event.unresolved_time}; time zone needs confirmation.`, 'warning'));
-    element.append(timer(event));
+    if (!historical) element.append(timer(event));
     event.sources.forEach((source, index) => element.append(link(`Official source ${index + 1} ↗`, source)));
     if (event.checked_at) element.append(node('p', `Verified: ${new Date(event.checked_at).toLocaleString()}${event.manual ? ' · Manual correction' : ''}`, 'meta'));
     return element;
@@ -88,6 +119,8 @@
     const links = node('div', undefined, 'links');
     links.append(link('Full schedule →', `${base}/conference/?id=${encodeURIComponent(record.id)}`), link('Download ICS', `${base}/calendar/${record.id}.ics`));
     element.append(links);
+    const reference = historicalReference(record, false);
+    if (reference) element.append(reference);
     return element;
   }
   function selected() {
@@ -119,6 +152,8 @@
         record.issues.forEach(issue => list.append(node('li', issue)));
         issues.append(list); detail.append(issues);
       }
+      const reference = historicalReference(record, true);
+      if (reference) detail.append(reference);
       content.append(detail);
     } else if (view === 'calendar') {
       const events = selected().flatMap(record => record.events.filter(e => e.precision !== 'tba').map(event => ({ record, event })));
