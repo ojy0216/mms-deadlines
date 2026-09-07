@@ -190,6 +190,15 @@
             return (aNext ? sortKey(aNext) : '9999').localeCompare(bNext ? sortKey(bNext) : '9999') || a.id.localeCompare(b.id);
           });
         }
+        if (group === 'Dates to be announced') {
+          const historicalDates = new Map(matches.map(record => {
+            const previous = mostRecentCompleted(record);
+            // Use historical month/day only for sorting; current dates remain TBA.
+            return [record, previous ? previous.events.find(event => event.kind === 'conference').date.slice(5, 10) : '99-99'];
+          }));
+          matches.sort((a, b) => Number(a.year) - Number(b.year) ||
+            historicalDates.get(a).localeCompare(historicalDates.get(b)));
+        }
         if (!matches.length) return;
         content.append(node('h2', `${group} · ${matches.length}`));
         const grid = node('div', undefined, 'grid');
