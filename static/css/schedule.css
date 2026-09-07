@@ -40,6 +40,11 @@ h2 { font-size: 22px; margin: 30px 0 14px; }
 .historical-reference h2, .historical-reference h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.5; }
 .historical-reference p { margin: 6px 0; }
 .historical-reference .event:last-child { border-bottom: 0; padding-bottom: 0; }
+.historical-dates { margin: 12px 0 0; font-size: 13px; }
+.historical-dates dt { font-weight: 700; margin-top: 12px; }
+.historical-dates dd { margin: 4px 0 0; }
+.historical-deadline { display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 6px; }
+.historical-deadline strong { font-weight: 600; }
 .collection-health { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 20px; }
 #health > div { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 #health a, #health li { overflow-wrap: anywhere; }
@@ -47,3 +52,4 @@ h2 { font-size: 22px; margin: 30px 0 14px; }
 footer { border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
 :focus-visible { outline: 3px solid #e09f2b; outline-offset: 3px; }
 @media (max-width: 700px) { .site-header { align-items: start; flex-direction: column; padding: 18px 24px; } nav { gap: 16px; } main { padding-top: 26px; } }
+@media (max-width: 700px) { .historical-deadline { flex-direction: column; gap: 0; } }

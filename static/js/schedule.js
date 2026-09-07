@@ -88,7 +88,18 @@
       reference.append(link('Official website ↗', previous.link));
       previous.events.forEach(event => reference.append(eventView(event, true)));
     } else {
-      reference.append(node('p', dateLabel(previous.events.find(event => event.kind === 'conference'))));
+      const dates = node('dl', undefined, 'historical-dates');
+      dates.append(node('dt', 'Main conference'), node('dd', dateLabel(previous.events.find(event => event.kind === 'conference'))));
+      const deadlines = node('dd');
+      ['abstract', 'paper', 'arr', 'commitment'].forEach(kind => {
+        previous.events.filter(event => event.kind === kind).forEach(event => {
+          const deadline = node('div', undefined, 'historical-deadline');
+          deadline.append(node('strong', labels[event.kind]), node('span', dateLabel(event)));
+          deadlines.append(deadline);
+        });
+      });
+      dates.append(node('dt', 'Submission deadlines'), deadlines);
+      reference.append(dates);
     }
     return reference;
   }
