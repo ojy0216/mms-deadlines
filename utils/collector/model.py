@@ -4,7 +4,7 @@ from datetime import date, datetime, timedelta, timezone
 import re
 from zoneinfo import ZoneInfo
 
-TITLES = ('ISSCC', 'VLSI', 'CICC', 'ESSERC', 'NeurIPS', 'ICLR', 'ICML', 'EMNLP', 'ECCV', 'ICCV')
+TITLES = ('ISSCC', 'VLSI', 'CICC', 'ESSERC', 'NeurIPS', 'ICLR', 'ICML', 'EMNLP', 'ECCV', 'ICCV', 'CVPR')
 KINDS = ('abstract', 'paper', 'arr', 'commitment', 'notification', 'conference')
 
 
@@ -115,7 +115,7 @@ def merge_events(record, candidates, errors, checked_at, overrides=None):
 
 def validate(records, require_all=False):
     if require_all:
-        assert {r['title'] for r in records} == set(TITLES), 'Dataset must contain all ten conferences'
+        assert {r['title'] for r in records} == set(TITLES), 'Dataset must contain all registered conferences'
     ids, editions = set(), set()
     for record in records:
         for key in ('title', 'year', 'id', 'link', 'deadline', 'timezone', 'date', 'place', 'sub', 'events', 'edition_sources'):

@@ -46,9 +46,109 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
+  - &id002
+    url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue
+- title: CVPR
+  year: 2031
+  id: cvpr31
+  link: https://www.thecvf.com/?page_id=100
+  deadline: TBA
+  timezone: TBA
+  date: TBA
+  place: Seattle
+  sub: Algorithm
+  edition_sources:
+  - https://www.thecvf.com/?page_id=100
+  events:
+  - kind: abstract
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: paper
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: notification
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: conference
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  needs_review: true
+  issues:
+  - 'abstract: not announced or historical source unavailable'
+  - 'conference: not announced or historical source unavailable'
+  - 'notification: not announced or historical source unavailable'
+  - 'paper: not announced or historical source unavailable'
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
+  collection_sources:
   - &id001
     url: https://www.thecvf.com/?page_id=100
     parser: cvf_venue
+- title: CVPR
+  year: 2030
+  id: cvpr30
+  link: https://www.thecvf.com/?page_id=100
+  deadline: TBA
+  timezone: TBA
+  date: TBA
+  place: Denver
+  sub: Algorithm
+  edition_sources:
+  - https://www.thecvf.com/?page_id=100
+  events:
+  - kind: abstract
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: paper
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: notification
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: conference
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  needs_review: true
+  issues:
+  - 'abstract: not announced or historical source unavailable'
+  - 'conference: not announced or historical source unavailable'
+  - 'notification: not announced or historical source unavailable'
+  - 'paper: not announced or historical source unavailable'
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
+  collection_sources:
+  - *id001
 - title: ICCV
   year: 2029
   id: iccv29
@@ -94,6 +194,55 @@
   - 'paper: not announced or historical source unavailable'
   - 'venue: not announced or historical source unavailable'
   last_attempt: '2026-10-15T18:53:35Z'
+  collection_sources:
+  - *id002
+- title: CVPR
+  year: 2029
+  id: cvpr29
+  link: https://www.thecvf.com/?page_id=100
+  deadline: TBA
+  timezone: TBA
+  date: TBA
+  place: Los Angeles
+  sub: Algorithm
+  edition_sources:
+  - https://www.thecvf.com/?page_id=100
+  events:
+  - kind: abstract
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: paper
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: notification
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: conference
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  needs_review: true
+  issues:
+  - 'abstract: not announced or historical source unavailable'
+  - 'conference: not announced or historical source unavailable'
+  - 'notification: not announced or historical source unavailable'
+  - 'paper: not announced or historical source unavailable'
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
   collection_sources:
   - *id001
 - title: VLSI
@@ -198,7 +347,7 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
-  - &id002
+  - &id003
     url: https://www.esserc.org/
     parser: esserc_future
     dates_selector: '#comp-lezhdn2a'
@@ -251,7 +400,7 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
-  - &id003
+  - &id004
     url: https://neurips.cc/Conferences/FutureMeetings
     parser: future_meetings
 - title: ICML
@@ -302,9 +451,58 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
-  - &id004
+  - &id005
     url: https://icml.cc/Conferences/FutureMeetings
     parser: future_meetings
+- title: CVPR
+  year: 2028
+  id: cvpr28
+  link: https://www.thecvf.com/?page_id=100
+  deadline: TBA
+  timezone: TBA
+  date: TBA
+  place: San Antonio
+  sub: Algorithm
+  edition_sources:
+  - https://www.thecvf.com/?page_id=100
+  events:
+  - kind: abstract
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: paper
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: notification
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  - kind: conference
+    date: TBA
+    precision: tba
+    timezone: TBA
+    sources: []
+    checked_at: null
+  needs_review: true
+  issues:
+  - 'abstract: not announced or historical source unavailable'
+  - 'conference: not announced or historical source unavailable'
+  - 'notification: not announced or historical source unavailable'
+  - 'paper: not announced or historical source unavailable'
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
+  collection_sources:
+  - *id001
 - title: ISSCC
   year: 2027
   id: isscc27
@@ -554,7 +752,7 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
-  - *id002
+  - *id003
 - title: NeurIPS
   year: 2027
   id: neurips27
@@ -603,7 +801,7 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
-  - *id003
+  - *id004
 - title: ICLR
   year: 2027
   id: iclr27
@@ -708,7 +906,7 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
-  - *id004
+  - *id005
 - title: ICCV
   year: 2027
   id: iccv27
@@ -757,7 +955,63 @@
   place_checked_at: '2026-10-15T18:53:35Z'
   last_success: '2026-10-15T18:53:35Z'
   collection_sources:
-  - *id001
+  - *id002
+- title: CVPR
+  year: 2027
+  id: cvpr27
+  link: https://cvpr.thecvf.com/Conferences/2027
+  deadline: '2026-11-16 23:59:59'
+  timezone: UTC-12
+  date: 2027-06-22 – 2027-06-25
+  place: Seattle
+  sub: Algorithm
+  edition_sources:
+  - https://cvpr.thecvf.com/Conferences/2027/Dates
+  events:
+  - kind: abstract
+    date: '2026-11-10 23:59:59'
+    precision: datetime
+    timezone: UTC-12
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2027/Dates
+    utc: '2026-11-11T11:59:59Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: paper
+    date: '2026-11-16 23:59:59'
+    precision: datetime
+    timezone: UTC-12
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2027/Dates
+    utc: '2026-11-17T11:59:59Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: notification
+    date: '2027-02-25 23:59:59'
+    precision: datetime
+    timezone: UTC-12
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2027/Dates
+    utc: '2027-02-26T11:59:59Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: conference
+    date: '2027-06-22'
+    end: '2027-06-25'
+    precision: date
+    timezone: TBA
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2027/Dates
+    checked_at: '2026-10-16T03:08:44Z'
+  needs_review: false
+  issues: []
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
+  collection_sources:
+  - url: https://cvpr.thecvf.com/Conferences/2027/Dates
+    parser: eventhosts
+  - url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue
 - title: ISSCC
   year: 2026
   id: isscc26
@@ -1322,6 +1576,61 @@
   place_sources:
   - https://www.thecvf.com/?page_id=100
   place_checked_at: '2026-10-15T18:53:35Z'
+- title: CVPR
+  year: 2026
+  id: cvpr26
+  link: https://cvpr.thecvf.com/Conferences/2026
+  deadline: '2025-11-13 23:59:59'
+  timezone: UTC-12
+  date: 2026-06-05 – 2026-06-07
+  place: Denver
+  sub: Algorithm
+  edition_sources:
+  - https://cvpr.thecvf.com/Conferences/2026/Dates
+  events:
+  - kind: abstract
+    date: '2025-11-07 23:59:59'
+    precision: datetime
+    timezone: UTC-12
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2026/Dates
+    utc: '2025-11-08T11:59:59Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: paper
+    date: '2025-11-13 23:59:59'
+    precision: datetime
+    timezone: UTC-12
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2026/Dates
+    utc: '2025-11-14T11:59:59Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: notification
+    date: '2026-02-20'
+    precision: date
+    timezone: UTC-12
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2026/Dates
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: conference
+    date: '2026-06-05'
+    end: '2026-06-07'
+    precision: date
+    timezone: TBA
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2026/Dates
+    checked_at: '2026-10-16T03:08:44Z'
+  needs_review: false
+  issues: []
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
+  collection_sources:
+  - url: https://cvpr.thecvf.com/Conferences/2026/Dates
+    parser: eventhosts
+  - url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue
 - title: ISSCC
   year: 2025
   id: isscc25
@@ -1880,6 +2189,62 @@
   place_sources:
   - https://www.thecvf.com/?page_id=100
   place_checked_at: '2026-10-15T18:53:35Z'
+- title: CVPR
+  year: 2025
+  id: cvpr25
+  link: https://cvpr.thecvf.com/Conferences/2025
+  deadline: '2024-11-15 07:59:00'
+  timezone: UTC
+  date: 2025-06-13 – 2025-06-15
+  place: Nashville
+  sub: Algorithm
+  edition_sources:
+  - https://cvpr.thecvf.com/Conferences/2025/Dates
+  events:
+  - kind: abstract
+    date: '2024-11-08 07:59:00'
+    precision: datetime
+    timezone: UTC
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2025/Dates
+    utc: '2024-11-08T07:59:00Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: paper
+    date: '2024-11-15 07:59:00'
+    precision: datetime
+    timezone: UTC
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2025/Dates
+    utc: '2024-11-15T07:59:00Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: notification
+    date: '2025-02-26'
+    precision: date
+    timezone: TBA
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2025/Dates
+    unresolved_time: Feb 26 2025 01:59 AM CST
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: conference
+    date: '2025-06-13'
+    end: '2025-06-15'
+    precision: date
+    timezone: TBA
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2025/Dates
+    checked_at: '2026-10-16T03:08:44Z'
+  needs_review: false
+  issues: []
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
+  collection_sources:
+  - url: https://cvpr.thecvf.com/Conferences/2025/Dates
+    parser: eventhosts
+  - url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue
 - title: ISSCC
   year: 2024
   id: isscc24
@@ -2409,3 +2774,59 @@
   place_sources:
   - https://www.thecvf.com/?page_id=100
   place_checked_at: '2026-10-15T18:53:35Z'
+- title: CVPR
+  year: 2024
+  id: cvpr24
+  link: https://cvpr.thecvf.com/Conferences/2024
+  deadline: '2023-11-18 07:59:00'
+  timezone: UTC
+  date: 2024-06-19 – 2024-06-21
+  place: Seattle
+  sub: Algorithm
+  edition_sources:
+  - https://cvpr.thecvf.com/Conferences/2024/Dates
+  events:
+  - kind: abstract
+    date: '2023-11-04 06:59:00'
+    precision: datetime
+    timezone: UTC
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2024/Dates
+    utc: '2023-11-04T06:59:00Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: paper
+    date: '2023-11-18 07:59:00'
+    precision: datetime
+    timezone: UTC
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2024/Dates
+    utc: '2023-11-18T07:59:00Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: notification
+    date: '2024-02-27 07:59:00'
+    precision: datetime
+    timezone: UTC
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2024/Dates
+    utc: '2024-02-27T07:59:00Z'
+    checked_at: '2026-10-16T03:08:44Z'
+  - kind: conference
+    date: '2024-06-19'
+    end: '2024-06-21'
+    precision: date
+    timezone: TBA
+    sources:
+    - https://cvpr.thecvf.com/Conferences/2024/Dates
+    checked_at: '2026-10-16T03:08:44Z'
+  needs_review: false
+  issues: []
+  last_attempt: '2026-10-16T03:08:44Z'
+  place_sources:
+  - https://www.thecvf.com/?page_id=100
+  place_checked_at: '2026-10-16T03:08:44Z'
+  last_success: '2026-10-16T03:08:44Z'
+  collection_sources:
+  - url: https://cvpr.thecvf.com/Conferences/2024/Dates
+    parser: eventhosts
+  - url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue

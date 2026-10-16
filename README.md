@@ -5,7 +5,7 @@
 **사이트:** https://ojy0216.github.io/mms-deadlines/
 
 - Circuit: ISSCC, VLSI (IEEE/JSAP Symposium on VLSI Technology & Circuits), CICC, ESSERC
-- Algorithm: NeurIPS, ICLR, ICML, EMNLP, ECCV, ICCV
+- Algorithm: NeurIPS, ICLR, ICML, EMNLP, ECCV, ICCV, CVPR
 - 개최 연도 기준 올해와 이전 2개년, 그리고 공식 발표된 미래 회차를 포함합니다. 2026년에는 2024년부터 표시하며, 2027년부터 2024년 회차는 제외됩니다.
 - 본 논문의 초록·제출·채택 발표, EMNLP ARR 제출·commitment, 개최 기간·장소를 추적합니다. Workshop, late-news, 별도 부가 트랙의 제출 일정은 포함하지 않습니다.
 

@@ -10,6 +10,10 @@ FIXTURES = Path(__file__).parent / 'fixtures' / 'raw'
 class OfficialSamples(unittest.TestCase):
     def test_eventhosts_main_track_and_meeting_ranges(self):
         cases = [
+            ('CVPR', 'cvpr.thecvf.com', 2024, '2023-11-18 07:59:00', '2024-06-19', '2024-06-21'),
+            ('CVPR', 'cvpr.thecvf.com', 2025, '2024-11-15 07:59:00', '2025-06-13', '2025-06-15'),
+            ('CVPR', 'cvpr.thecvf.com', 2026, '2025-11-13 23:59:59', '2026-06-05', '2026-06-07'),
+            ('CVPR', 'cvpr.thecvf.com', 2027, '2026-11-16 23:59:59', '2027-06-22', '2027-06-25'),
             ('NeurIPS', 'neurips.cc', 2024, '2024-05-22 20:00:00', '2024-12-11', '2024-12-13'),
             ('NeurIPS', 'neurips.cc', 2026, '2026-05-06 23:59:59', '2026-12-08', '2026-12-11'),
             ('ICLR', 'iclr.cc', 2025, '2024-10-01 23:59:59', '2025-04-24', '2025-04-26'),

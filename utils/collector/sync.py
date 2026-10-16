@@ -99,7 +99,7 @@ def run(root=ROOT, now=None, fetch=None):
     fetch = fetch or Fetcher(root / '.sync-cache')
     registry = read_yaml(root / 'utils/sources.yml', [])
     if sorted(c['title'] for c in registry) != sorted(TITLES):
-        raise ValueError('Registry must contain each of the ten conferences exactly once')
+        raise ValueError('Registry must contain each registered conference exactly once')
     previous = read_yaml(root / '_data/conferences.yml', [])
     # Validate before indexing: a dict would silently discard duplicate editions.
     validate(previous)

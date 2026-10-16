@@ -507,3 +507,45 @@
       - url: https://2026.emnlp.org/program/
         parser: emnlp_program
         identity: EMNLP 2026
+- title: CVPR
+  hosts:
+  - cvpr.thecvf.com
+  discovery:
+  - https://cvpr.thecvf.com/
+  parser: eventhosts
+  editions:
+    2024:
+      link: https://cvpr.thecvf.com/Conferences/2024
+      evidence: https://cvpr.thecvf.com/Conferences/2024/Dates
+      sources:
+      - url: https://cvpr.thecvf.com/Conferences/2024/Dates
+        parser: eventhosts
+      - url: https://www.thecvf.com/?page_id=100
+        parser: cvf_venue
+    2025:
+      link: https://cvpr.thecvf.com/Conferences/2025
+      evidence: https://cvpr.thecvf.com/Conferences/2025/Dates
+      sources:
+      - url: https://cvpr.thecvf.com/Conferences/2025/Dates
+        parser: eventhosts
+      - url: https://www.thecvf.com/?page_id=100
+        parser: cvf_venue
+    2026:
+      link: https://cvpr.thecvf.com/Conferences/2026
+      evidence: https://cvpr.thecvf.com/Conferences/2026/Dates
+      sources:
+      - url: https://cvpr.thecvf.com/Conferences/2026/Dates
+        parser: eventhosts
+      - url: https://www.thecvf.com/?page_id=100
+        parser: cvf_venue
+    2027:
+      link: https://cvpr.thecvf.com/Conferences/2027
+      evidence: https://cvpr.thecvf.com/Conferences/2027/Dates
+      sources:
+      - url: https://cvpr.thecvf.com/Conferences/2027/Dates
+        parser: eventhosts
+      - url: https://www.thecvf.com/?page_id=100
+        parser: cvf_venue
+  announcements:
+  - url: https://www.thecvf.com/?page_id=100
+    parser: cvf_venue

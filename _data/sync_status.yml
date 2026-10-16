@@ -157,5 +157,28 @@ conferences:
     issues: []
     sources:
     - https://2026.emnlp.org/
+  CVPR:
+    last_attempt: '2026-10-16T03:08:44Z'
+    last_success: '2026-10-16T03:08:44Z'
+    needs_review: true
+    issues:
+    - '2028: abstract: not announced or historical source unavailable'
+    - '2028: conference: not announced or historical source unavailable'
+    - '2028: notification: not announced or historical source unavailable'
+    - '2028: paper: not announced or historical source unavailable'
+    - '2029: abstract: not announced or historical source unavailable'
+    - '2029: conference: not announced or historical source unavailable'
+    - '2029: notification: not announced or historical source unavailable'
+    - '2029: paper: not announced or historical source unavailable'
+    - '2030: abstract: not announced or historical source unavailable'
+    - '2030: conference: not announced or historical source unavailable'
+    - '2030: notification: not announced or historical source unavailable'
+    - '2030: paper: not announced or historical source unavailable'
+    - '2031: abstract: not announced or historical source unavailable'
+    - '2031: conference: not announced or historical source unavailable'
+    - '2031: notification: not announced or historical source unavailable'
+    - '2031: paper: not announced or historical source unavailable'
+    sources:
+    - https://cvpr.thecvf.com/
 last_success: '2026-10-15T18:53:35Z'
-record_count: 41
+record_count: 49

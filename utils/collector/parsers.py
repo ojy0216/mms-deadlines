@@ -86,7 +86,7 @@ LABELS = {
 
 
 def eventhosts(soup, source, year):
-    """NeurIPS/ICLR/ICML/ECCV/ICCV share EventHosts markup."""
+    """NeurIPS/ICLR/ICML/ECCV/ICCV/CVPR share EventHosts markup."""
     events = []
     section = None
     for row in soup.select('tr'):
@@ -127,6 +127,8 @@ def meeting_range(raw, year):
     raw = re.sub(r'\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Tues|Wed|Thu|Thur|Thurs|Fri|Sat|Sun)\.?\b|\bthe\b', '', raw, flags=re.I)
     raw = re.sub(r'(\d)(st|nd|rd|th)\b', r'\1', raw)
     raw = re.sub(r'\s+', ' ', raw).strip()
+    raw = re.sub(r'([A-Za-z]+),\s*(?=\d)', r'\1 ', raw)
+    raw = re.sub(r',\s*(?=\d)', ', ', raw)
     listed_days = re.fullmatch(r'([A-Za-z]+) (\d{1,2})(?:, \d{1,2})+,?', raw)
     if listed_days:
         days = [int(d) for d in re.findall(r'\d+', raw)]
@@ -151,7 +153,7 @@ def meeting(soup, source, year):
             continue
         values = [c.get_text(' ', strip=True) for c in cells]
         for i, value in enumerate(values):
-            if value in ('Main Conference', 'Conference Sessions', 'Main Conference + Tutorials'):
+            if value in ('Main Conference', 'Main Conference Sessions', 'Conference Sessions', 'Main Conference + Tutorials'):
                 ranges.append(meeting_range(values[1-i], year))
                 heading = row.find_previous('th', colspan=True)
                 if heading and heading in container.descendants:
