@@ -40,11 +40,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - &id002
     url: https://www.thecvf.com/?page_id=100
@@ -91,11 +91,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - &id001
     url: https://www.thecvf.com/?page_id=100
@@ -142,11 +142,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id001
 - title: ICCV
@@ -193,7 +193,7 @@
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
   - 'venue: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id002
 - title: CVPR
@@ -238,11 +238,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id001
 - title: VLSI
@@ -290,7 +290,7 @@
   - 'https://www.vlsisymposium.org/future-symposia/: source: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/future-symposia/'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.vlsisymposium.org/future-symposia/
   place_checked_at: '2026-09-06T17:24:20Z'
@@ -335,17 +335,17 @@
     timezone: TBA
     sources:
     - https://www.esserc.org/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.esserc.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - &id003
     url: https://www.esserc.org/
@@ -394,11 +394,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://neurips.cc/Conferences/FutureMeetings
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - &id004
     url: https://neurips.cc/Conferences/FutureMeetings
@@ -445,11 +445,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://icml.cc/Conferences/FutureMeetings
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - &id005
     url: https://icml.cc/Conferences/FutureMeetings
@@ -496,11 +496,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id001
 - title: ISSCC
@@ -522,7 +522,7 @@
     sources:
     - https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027CFP.pdf
     utc: '2026-09-09T19:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-09-09 15:00:00'
     precision: datetime
@@ -530,14 +530,14 @@
     sources:
     - https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027CFP.pdf
     utc: '2026-09-09T19:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-10-21'
     precision: date
     timezone: TBA
     sources:
     - https://www.isscc.org/paper-submission-26
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2027-02-14'
     end: '2027-02-18'
@@ -546,11 +546,11 @@
     sources:
     - https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027CFP.pdf
     place: SAN FRANCISCO MARRIOTT MARQUIS, SAN FRANCISCO, CA
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027CFP.pdf
     identity: ISSCC 2027 CALL FOR PAPERS
@@ -573,7 +573,7 @@
       pattern: Authors are notified by (?P<date>October \d+, 2026)
   place_sources:
   - https://submissions.mirasmart.com/ISSCC2027/PDF/ISSCC2027CFP.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: VLSI
   year: 2027
   id: vlsi27
@@ -625,7 +625,7 @@
   - 'https://www.vlsisymposium.org/future-symposia/: source: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/future-symposia/'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not extracted this attempt; retained previous value'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.vlsisymposium.org/future-symposia/
   place_checked_at: '2026-09-06T17:24:20Z'
@@ -664,14 +664,14 @@
     sources:
     - https://www.ieee-cicc.org/2027-call-for-papers/
     utc: '2026-11-17T07:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2027-01-12'
     precision: date
     timezone: TBA
     sources:
     - https://www.ieee-cicc.org/2027-call-for-papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2027-04-18'
     end: '2027-04-22'
@@ -680,12 +680,12 @@
     sources:
     - https://www.ieee-cicc.org/2027-call-for-papers/
     place: San Diego, CA, USA
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://www.ieee-cicc.org/2027-call-for-papers/
     identity: CICC 2027|2027.?CICC
@@ -702,7 +702,7 @@
       pattern: (?P<date>April \d+ – \d+, 20\d\d) – (?P<place>[^.]+?, [A-Z]{2}, USA)
   place_sources:
   - https://www.ieee-cicc.org/2027-call-for-papers/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ESSERC
   year: 2027
   id: esserc27
@@ -740,17 +740,17 @@
     timezone: TBA
     sources:
     - https://www.esserc.org/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.esserc.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id003
 - title: ISICAS
@@ -790,17 +790,17 @@
     timezone: TBA
     sources:
     - https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems
     identity: 2027 IEEE International Symposium on Integrated Circuits and Systems
@@ -851,11 +851,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://neurips.cc/Conferences/FutureMeetings
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id004
 - title: ICLR
@@ -877,7 +877,7 @@
     sources:
     - https://iclr.cc/Conferences/2027/Dates
     utc: '2026-09-19T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-09-25 23:59:59'
     precision: datetime
@@ -885,14 +885,14 @@
     sources:
     - https://iclr.cc/Conferences/2027/Dates
     utc: '2026-09-26T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-12-16'
     precision: date
     timezone: TBA
     sources:
     - https://iclr.cc/Conferences/2027/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2027-04-26'
     end: '2027-04-28'
@@ -900,20 +900,20 @@
     timezone: TBA
     sources:
     - https://iclr.cc/Conferences/2027/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://iclr.cc/Conferences/2027/Dates
     parser: eventhosts
   - url: https://iclr.cc/Conferences/2027
     identity: ICLR 2027
     venue_pattern: Learning Representations (?P<place>California)
-  last_success: '2026-11-03T10:28:48Z'
+  last_success: '2026-11-03T10:53:30Z'
   place_sources:
   - https://iclr.cc/Conferences/2027
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICML
   year: 2027
   id: icml27
@@ -956,11 +956,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://icml.cc/Conferences/FutureMeetings
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id005
 - title: ICCV
@@ -1005,11 +1005,11 @@
   - 'conference: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - *id002
 - title: CVPR
@@ -1031,7 +1031,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2027/Dates
     utc: '2026-11-11T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-11-16 23:59:59'
     precision: datetime
@@ -1039,7 +1039,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2027/Dates
     utc: '2026-11-17T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2027-02-25 23:59:59'
     precision: datetime
@@ -1047,7 +1047,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2027/Dates
     utc: '2027-02-26T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2027-06-22'
     end: '2027-06-25'
@@ -1055,14 +1055,14 @@
     timezone: TBA
     sources:
     - https://cvpr.thecvf.com/Conferences/2027/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://cvpr.thecvf.com/Conferences/2027/Dates
     parser: eventhosts
@@ -1087,7 +1087,7 @@
     sources:
     - https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
     utc: '2025-09-03T19:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-09-03 15:00:00'
     precision: datetime
@@ -1095,14 +1095,14 @@
     sources:
     - https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
     utc: '2025-09-03T19:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-10-15'
     precision: date
     timezone: TBA
     sources:
     - https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-02-15'
     end: '2026-02-19'
@@ -1111,11 +1111,11 @@
     sources:
     - https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
     place: SAN FRANCISCO MARRIOTT MARQUIS, SAN FRANCISCO, CA
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
     identity: ISSCC 2026 CALL FOR PAPERS
@@ -1135,7 +1135,7 @@
     format: pdf
   place_sources:
   - https://submissions.mirasmart.com/ISSCC2026/PDF/ISSCC2026CFP.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: VLSI
   year: 2026
   id: vlsi26
@@ -1187,7 +1187,7 @@
     paper: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not extracted this attempt; retained previous value'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   last_success: '2026-09-06T17:24:20Z'
   collection_sources:
   - url: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf
@@ -1243,7 +1243,7 @@
     sources:
     - https://www.ieee-cicc.org/wp-content/uploads/2025/09/CICC-2026-Call-for-Papers_FINAL.pdf
     place: Seattle, WA, USA
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
@@ -1253,7 +1253,7 @@
     url: https://www.ieee-cicc.org/2026-cicc-author-submission-guidelines/'
   - 'notification: not extracted this attempt; retained previous value'
   - 'paper: not extracted this attempt; retained previous value'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://www.ieee-cicc.org/2026-cicc-author-submission-guidelines/
     identity: CICC 2026|2026.?CICC
@@ -1273,7 +1273,7 @@
       pattern: (?P<date>April 19 – 23, 2026) – (?P<place>Seattle, WA, USA)
   place_sources:
   - https://www.ieee-cicc.org/wp-content/uploads/2025/09/CICC-2026-Call-for-Papers_FINAL.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
   last_success: '2026-09-06T16:25:00Z'
 - title: ESSERC
   year: 2026
@@ -1301,7 +1301,7 @@
     - https://www.esserc2026.org/papers
     utc: '2026-04-11T04:59:00Z'
     extended: true
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-05-27 23:59:00'
     precision: datetime
@@ -1309,7 +1309,7 @@
     sources:
     - https://www.esserc2026.org/papers
     utc: '2026-05-28T04:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-09-07'
     end: '2026-09-10'
@@ -1317,12 +1317,12 @@
     timezone: TBA
     sources:
     - https://www.esserc.org/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://www.esserc2026.org/papers
     identity: ESSERC 2026
@@ -1340,7 +1340,7 @@
     places_selector: '#comp-lezhg2rz'
   place_sources:
   - https://www.esserc.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: A-SSCC
   year: 2026
   id: asscc26
@@ -1366,14 +1366,14 @@
     sources:
     - https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf
     utc: '2026-06-03T20:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-08-08'
     precision: date
     timezone: TBA
     sources:
     - https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-11-01'
     end: '2026-11-04'
@@ -1381,15 +1381,15 @@
     timezone: TBA
     sources:
     - https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf
     identity: A\s*-SSCC 2026
@@ -1430,7 +1430,7 @@
     - https://2026.ieee-isicas.org/authors/important-dates.html
     track: tcas-i
     track_label: TCAS-I
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-05-11'
     precision: date
@@ -1439,7 +1439,7 @@
     - https://2026.ieee-isicas.org/authors/important-dates.html
     track: tbiocas
     track_label: TBioCAS
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-05-11'
     precision: date
@@ -1448,7 +1448,7 @@
     - https://2026.ieee-isicas.org/authors/important-dates.html
     track: tcas-ai
     track_label: TCAS-AI
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-05-11'
     precision: date
@@ -1457,7 +1457,7 @@
     - https://2026.ieee-isicas.org/authors/important-dates.html
     track: tvlsi
     track_label: TVLSI
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-06-01'
     precision: date
@@ -1466,7 +1466,7 @@
     - https://2026.ieee-isicas.org/authors/important-dates.html
     track: tcas-ii
     track_label: TCAS-II
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-06-01'
     precision: date
@@ -1475,14 +1475,14 @@
     - https://2026.ieee-isicas.org/authors/important-dates.html
     track: ojcas
     track_label: OJCAS
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-09-14'
     precision: date
     timezone: TBA
     sources:
     - https://2026.ieee-isicas.org/authors/important-dates.html
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-12-04'
     end: '2026-12-06'
@@ -1490,15 +1490,15 @@
     timezone: TBA
     sources:
     - https://2026.ieee-isicas.org/authors/important-dates.html
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://2026.ieee-isicas.org/authors/important-dates.html
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://2026.ieee-isicas.org/authors/important-dates.html
     identity: IEEE ISICAS 2026
@@ -1552,7 +1552,7 @@
     sources:
     - https://neurips.cc/Conferences/2026/Dates
     utc: '2026-05-05T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-05-06 23:59:59'
     precision: datetime
@@ -1560,14 +1560,14 @@
     sources:
     - https://neurips.cc/Conferences/2026/Dates
     utc: '2026-05-07T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-09-24'
     precision: date
     timezone: UTC-12
     sources:
     - https://neurips.cc/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-12-08'
     end: '2026-12-11'
@@ -1585,17 +1585,17 @@
       end: '2026-12-11'
     - date: '2026-12-09'
       end: '2026-12-11'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://neurips.cc/Conferences/2026/Dates
     parser: eventhosts
   place_sources:
   - https://neurips.cc/Conferences/2026/Dates
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICLR
   year: 2026
   id: iclr26
@@ -1615,7 +1615,7 @@
     sources:
     - https://iclr.cc/Conferences/2026/Dates
     utc: '2025-09-20T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-09-24 23:59:59'
     precision: datetime
@@ -1623,14 +1623,14 @@
     sources:
     - https://iclr.cc/Conferences/2026/Dates
     utc: '2025-09-25T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-01-25'
     precision: date
     timezone: UTC-12
     sources:
     - https://iclr.cc/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-04-23'
     end: '2026-04-25'
@@ -1638,20 +1638,20 @@
     timezone: TBA
     sources:
     - https://iclr.cc/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://iclr.cc/Conferences/2026/Dates
     parser: eventhosts
   - url: https://iclr.cc/Conferences/2026
     identity: ICLR 2026
     venue_pattern: Learning Representations Schedule (?P<place>Rio de Janeiro, Brazil)
-  last_success: '2026-11-03T10:28:48Z'
+  last_success: '2026-11-03T10:53:30Z'
   place_sources:
   - https://iclr.cc/Conferences/2026
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICML
   year: 2026
   id: icml26
@@ -1671,7 +1671,7 @@
     sources:
     - https://icml.cc/Conferences/2026/Dates
     utc: '2026-01-24T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-01-28 23:59:59'
     precision: datetime
@@ -1679,14 +1679,14 @@
     sources:
     - https://icml.cc/Conferences/2026/Dates
     utc: '2026-01-29T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-04-30'
     precision: date
     timezone: UTC-12
     sources:
     - https://icml.cc/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-07-07'
     end: '2026-07-09'
@@ -1694,11 +1694,11 @@
     timezone: TBA
     sources:
     - https://icml.cc/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://icml.cc/Conferences/2026/Dates
     parser: eventhosts
@@ -1707,7 +1707,7 @@
     venue_pattern: Machine Learning (?P<place>Seoul, South Korea)
   place_sources:
   - https://icml.cc/Conferences/2026
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: EMNLP
   year: 2026
   id: emnlp26
@@ -1726,21 +1726,21 @@
     timezone: TBA
     sources:
     - https://2026.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: commitment
     date: '2026-08-02'
     precision: date
     timezone: TBA
     sources:
     - https://2026.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-08-20'
     precision: date
     timezone: TBA
     sources:
     - https://2026.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-10-25'
     end: '2026-10-27'
@@ -1748,11 +1748,11 @@
     timezone: TBA
     sources:
     - https://2026.emnlp.org/program/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://2026.emnlp.org/calls/main_conference_papers/
     parser: emnlp
@@ -1768,7 +1768,7 @@
     identity: EMNLP 2026
   place_sources:
   - https://2026.emnlp.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ECCV
   year: 2026
   id: eccv26
@@ -1788,7 +1788,7 @@
     sources:
     - https://eccv.ecva.net/Conferences/2026/Dates
     utc: '2026-02-26T22:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2026-03-05 22:00:00'
     precision: datetime
@@ -1796,14 +1796,14 @@
     sources:
     - https://eccv.ecva.net/Conferences/2026/Dates
     utc: '2026-03-05T22:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-06-17'
     precision: date
     timezone: TBA
     sources:
     - https://eccv.ecva.net/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-09-10'
     end: '2026-09-12'
@@ -1811,19 +1811,19 @@
     timezone: TBA
     sources:
     - https://eccv.ecva.net/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://eccv.ecva.net/Conferences/2026/Dates
     parser: eventhosts
   - url: https://www.thecvf.com/?page_id=100
     parser: cvf_venue
-  last_success: '2026-11-03T10:28:48Z'
+  last_success: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: CVPR
   year: 2026
   id: cvpr26
@@ -1843,7 +1843,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2026/Dates
     utc: '2025-11-08T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-11-13 23:59:59'
     precision: datetime
@@ -1851,14 +1851,14 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2026/Dates
     utc: '2025-11-14T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2026-02-20'
     precision: date
     timezone: UTC-12
     sources:
     - https://cvpr.thecvf.com/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2026-06-05'
     end: '2026-06-07'
@@ -1866,14 +1866,14 @@
     timezone: TBA
     sources:
     - https://cvpr.thecvf.com/Conferences/2026/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://cvpr.thecvf.com/Conferences/2026/Dates
     parser: eventhosts
@@ -1898,7 +1898,7 @@
     sources:
     - https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
     utc: '2024-09-04T19:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-09-04 15:00:00'
     precision: datetime
@@ -1906,14 +1906,14 @@
     sources:
     - https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
     utc: '2024-09-04T19:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-10-14'
     precision: date
     timezone: TBA
     sources:
     - https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-02-16'
     end: '2025-02-20'
@@ -1922,14 +1922,14 @@
     sources:
     - https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
     place: SAN FRANCISCO MARRIOTT MARQUIS, SAN FRANCISCO, CA
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://sscs.ieee.org/wp-content/uploads/ISSCC2025CFP.pdf
     format: pdf
@@ -1972,7 +1972,7 @@
     sources:
     - https://archive.vlsisymposium.org/25web/index.html
     utc: '2025-01-27T14:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: TBA
     precision: tba
@@ -1987,13 +1987,13 @@
     sources:
     - https://archive.vlsisymposium.org/25web/index.html
     place: Rihga Royal Hotel Kyoto, Japan
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://archive.vlsisymposium.org/25web/index.html
     identity: 2025 Symposium
@@ -2007,7 +2007,7 @@
       pattern: (?P<place>Rihga Royal Hotel Kyoto, Japan) Sunday–Thursday, (?P<date>June 8–12, 2025)
   place_sources:
   - https://archive.vlsisymposium.org/25web/index.html
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: CICC
   year: 2025
   id: cicc25
@@ -2033,14 +2033,14 @@
     sources:
     - https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
     utc: '2024-11-12T04:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-01-14'
     precision: date
     timezone: TBA
     sources:
     - https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-04-13'
     end: '2025-04-16'
@@ -2049,12 +2049,12 @@
     sources:
     - https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
     place: Boston, MA, USA
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
     identity: CICC 2025|2025.?CICC
@@ -2071,7 +2071,7 @@
       pattern: (?P<date>April \d+ – \d+, 20\d\d) – (?P<place>[^.]+?, [A-Z]{2}, USA)
   place_sources:
   - https://www.ieee-cicc.org/2025archive/2025-call-for-papers/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ESSERC
   year: 2025
   id: esserc25
@@ -2121,13 +2121,13 @@
     sources:
     - https://ieee-cas.org/files/ieeecass/2025-01/ESSERC-2025_CallForPapers.pdf
     place: MUNICH (Germany)
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'https://www.esserc2025.org/papers: paper: ParseError: Edition identity not found: ESSERC 2025'
   - 'paper: parsing incomplete; retained previous value'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   last_success: '2026-10-07T20:25:25Z'
   collection_sources:
   - url: https://ieee-cas.org/files/ieeecass/2025-01/ESSERC-2025_CallForPapers.pdf
@@ -2150,7 +2150,7 @@
       extended: true
   place_sources:
   - https://ieee-cas.org/files/ieeecass/2025-01/ESSERC-2025_CallForPapers.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: A-SSCC
   year: 2025
   id: asscc25
@@ -2177,14 +2177,14 @@
     - https://www.a-sscc2025.org/
     utc: '2025-06-18T20:00:00Z'
     extended: true
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-08-09'
     precision: date
     timezone: TBA
     sources:
     - https://www.a-sscc2025.org/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-11-03'
     end: '2025-11-05'
@@ -2192,14 +2192,14 @@
     timezone: TBA
     sources:
     - https://www.a-sscc2025.org/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.a-sscc2025.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://www.a-sscc2025.org/
     identity: A-SSCC\s*2025
@@ -2214,7 +2214,7 @@
       pattern: plenary talks is scheduled at the start of the main program,\s*(?P<date>November \d+ through \d+)\.
       range: true
     venue_pattern: (?P<place>Daejeon Convention Center \(DCC\), Daejeon, South Korea)
-  last_success: '2026-11-03T10:28:48Z'
+  last_success: '2026-11-03T10:53:30Z'
 - title: ISICAS
   year: 2025
   id: isicas25
@@ -2242,7 +2242,7 @@
     extended: true
     track: tcas-i
     track_label: TCAS-I
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-03-20'
     precision: date
@@ -2252,7 +2252,7 @@
     extended: true
     track: tbiocas
     track_label: TBioCAS
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-03-06'
     precision: date
@@ -2262,7 +2262,7 @@
     extended: true
     track: tcas-ai
     track_label: TCAS-AI
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-03-20'
     precision: date
@@ -2272,7 +2272,7 @@
     extended: true
     track: tvlsi
     track_label: TVLSI
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-03-06'
     precision: date
@@ -2282,7 +2282,7 @@
     extended: true
     track: tcas-ii
     track_label: TCAS-II
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-03-20'
     precision: date
@@ -2292,7 +2292,7 @@
     extended: true
     track: ojcas
     track_label: OJCAS
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: TBA
     precision: tba
@@ -2306,16 +2306,16 @@
     timezone: TBA
     sources:
     - https://2025.ieee-isicas.org/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://2025.ieee-isicas.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://2025.ieee-isicas.org/authors/ps.html
     identity: IEEE ISICAS 2025
@@ -2382,7 +2382,7 @@
     sources:
     - https://neurips.cc/Conferences/2025/Dates
     utc: '2025-05-12T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-05-15 23:59:59'
     precision: datetime
@@ -2390,14 +2390,14 @@
     sources:
     - https://neurips.cc/Conferences/2025/Dates
     utc: '2025-05-16T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-09-18'
     precision: date
     timezone: UTC-12
     sources:
     - https://neurips.cc/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-12-03'
     end: '2025-12-05'
@@ -2405,11 +2405,11 @@
     timezone: TBA
     sources:
     - https://neurips.cc/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://neurips.cc/Conferences/2025/Dates
     parser: eventhosts
@@ -2419,7 +2419,7 @@
     venue_multiple: true
   place_sources:
   - https://neurips.cc/Conferences/2025
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICLR
   year: 2025
   id: iclr25
@@ -2439,7 +2439,7 @@
     sources:
     - https://iclr.cc/Conferences/2025/Dates
     utc: '2024-09-28T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-10-01 23:59:59'
     precision: datetime
@@ -2447,7 +2447,7 @@
     sources:
     - https://iclr.cc/Conferences/2025/Dates
     utc: '2024-10-02T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-01-22 23:59:59'
     precision: datetime
@@ -2455,7 +2455,7 @@
     sources:
     - https://iclr.cc/Conferences/2025/Dates
     utc: '2025-01-23T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-04-24'
     end: '2025-04-26'
@@ -2463,20 +2463,20 @@
     timezone: TBA
     sources:
     - https://iclr.cc/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://iclr.cc/Conferences/2025/Dates
     parser: eventhosts
   - url: https://iclr.cc/Conferences/2025
     identity: ICLR 2025
     venue_pattern: Learning Representations (?P<place>Singapore EXPO)
-  last_success: '2026-11-03T10:28:48Z'
+  last_success: '2026-11-03T10:53:30Z'
   place_sources:
   - https://iclr.cc/Conferences/2025
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICML
   year: 2025
   id: icml25
@@ -2495,7 +2495,7 @@
     timezone: UTC-12
     sources:
     - https://icml.cc/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-01-30 23:59:59'
     precision: datetime
@@ -2503,14 +2503,14 @@
     sources:
     - https://icml.cc/Conferences/2025/Dates
     utc: '2025-01-31T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-05-01'
     precision: date
     timezone: UTC-12
     sources:
     - https://icml.cc/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-07-15'
     end: '2025-07-17'
@@ -2518,11 +2518,11 @@
     timezone: TBA
     sources:
     - https://icml.cc/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://icml.cc/Conferences/2025/Dates
     parser: eventhosts
@@ -2531,7 +2531,7 @@
     venue_pattern: Machine Learning (?P<place>Vancouver Convention Center)
   place_sources:
   - https://icml.cc/Conferences/2025
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: EMNLP
   year: 2025
   id: emnlp25
@@ -2550,21 +2550,21 @@
     timezone: TBA
     sources:
     - https://2025.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: commitment
     date: '2025-08-01'
     precision: date
     timezone: TBA
     sources:
     - https://2025.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-08-20'
     precision: date
     timezone: TBA
     sources:
     - https://2025.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-11-05'
     end: '2025-11-07'
@@ -2572,11 +2572,11 @@
     timezone: TBA
     sources:
     - https://2025.emnlp.org/program/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://2025.emnlp.org/calls/main_conference_papers/
     parser: emnlp
@@ -2592,7 +2592,7 @@
     identity: EMNLP 2025
   place_sources:
   - https://2025.emnlp.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICCV
   year: 2025
   id: iccv25
@@ -2612,7 +2612,7 @@
     sources:
     - https://iccv.thecvf.com/Conferences/2025/Dates
     utc: '2025-03-04T09:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2025-03-07 23:59:59'
     precision: datetime
@@ -2620,7 +2620,7 @@
     sources:
     - https://iccv.thecvf.com/Conferences/2025/Dates
     utc: '2025-03-08T09:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-06-25 23:59:59'
     precision: datetime
@@ -2628,7 +2628,7 @@
     sources:
     - https://iccv.thecvf.com/Conferences/2025/Dates
     utc: '2025-06-26T09:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-10-21'
     end: '2025-10-23'
@@ -2636,11 +2636,11 @@
     timezone: TBA
     sources:
     - https://iccv.thecvf.com/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://iccv.thecvf.com/Conferences/2025/Dates
     parser: eventhosts
@@ -2648,7 +2648,7 @@
     parser: cvf_venue
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: CVPR
   year: 2025
   id: cvpr25
@@ -2668,7 +2668,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2025/Dates
     utc: '2024-11-08T07:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-11-15 07:59:00'
     precision: datetime
@@ -2676,7 +2676,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2025/Dates
     utc: '2024-11-15T07:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2025-02-26'
     precision: date
@@ -2684,7 +2684,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2025/Dates
     unresolved_time: Feb 26 2025 01:59 AM CST
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2025-06-13'
     end: '2025-06-15'
@@ -2692,14 +2692,14 @@
     timezone: TBA
     sources:
     - https://cvpr.thecvf.com/Conferences/2025/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://cvpr.thecvf.com/Conferences/2025/Dates
     parser: eventhosts
@@ -2730,7 +2730,7 @@
     sources:
     - https://events.vtools.ieee.org/m/371293
     utc: '2023-09-06T19:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: TBA
     precision: tba
@@ -2745,16 +2745,16 @@
     sources:
     - https://www.isscc.org/s/ISSCC2024AdvanceProgram-Final.pdf
     place: SAN FRANCISCO MARRIOTT MARQUIS HOTEL
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.isscc.org/s/ISSCC2024AdvanceProgram-Final.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://events.vtools.ieee.org/m/371293
     identity: ISSCC 2024
@@ -2794,7 +2794,7 @@
     sources:
     - https://archive.vlsisymposium.org/24web/call-for-papers/
     utc: '2024-02-06T07:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: TBA
     precision: tba
@@ -2809,13 +2809,13 @@
     sources:
     - https://archive.vlsisymposium.org/24web/
     place: HILTON HAWAIIAN VILLAGE HONOLULU, HAWAII
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://archive.vlsisymposium.org/24web/call-for-papers/
     identity: 2024 IEEE Symposium on VLSI
@@ -2830,7 +2830,7 @@
       pattern: (?P<place>HILTON HAWAIIAN VILLAGE HONOLULU, HAWAII) (?P<date>JUNE 16-20, 2024)
   place_sources:
   - https://archive.vlsisymposium.org/24web/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: CICC
   year: 2024
   id: cicc24
@@ -2868,15 +2868,15 @@
     timezone: TBA
     sources:
     - https://www.ieee-cicc.org/wp-content/uploads/2024/04/CICC-2024_Program-4-2-24.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
   - 'venue: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://www.ieee-cicc.org/wp-content/uploads/2024/04/CICC-2024_Program-4-2-24.pdf
     format: pdf
@@ -2909,14 +2909,14 @@
     timezone: TBA
     sources:
     - https://ieee-cas.org/files/ieeecass/2024-02/ESSERC-2024_Call%20for%20Papers.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-05-24'
     precision: date
     timezone: TBA
     sources:
     - https://ieee-cas.org/files/ieeecass/2024-02/ESSERC-2024_Call%20for%20Papers.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-09-09'
     end: '2024-09-12'
@@ -2925,12 +2925,12 @@
     sources:
     - https://ieee-cas.org/files/ieeecass/2024-02/ESSERC-2024_Call%20for%20Papers.pdf
     place: BRUGES (Belgium)
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://ieee-cas.org/files/ieeecass/2024-02/ESSERC-2024_Call%20for%20Papers.pdf
     identity: ESSERC2024
@@ -2945,7 +2945,7 @@
     format: pdf
   place_sources:
   - https://ieee-cas.org/files/ieeecass/2024-02/ESSERC-2024_Call%20for%20Papers.pdf
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: A-SSCC
   year: 2024
   id: asscc24
@@ -2997,7 +2997,7 @@
   - 'notification: not announced or historical source unavailable'
   - 'paper: not announced or historical source unavailable'
   - 'venue: parsing incomplete; retained previous value'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://ieeexplore.ieee.org/document/10849111/
     identity: 2024 IEEE Asian Solid-State Circuits Conference
@@ -3035,7 +3035,7 @@
     extended: true
     track: tcas-i
     track_label: TCAS-I
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-04-29'
     precision: date
@@ -3045,7 +3045,7 @@
     extended: true
     track: tbiocas
     track_label: TBioCAS
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-04-29'
     precision: date
@@ -3055,7 +3055,7 @@
     extended: true
     track: tcas-ii
     track_label: TCAS-II
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-04-29'
     precision: date
@@ -3065,14 +3065,14 @@
     extended: true
     track: ojcas
     track_label: OJCAS
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-07-03'
     precision: date
     timezone: TBA
     sources:
     - https://ieee-cas.org/files/ieeecass/2024-03/ISICAS-2024_Call%20for%20Papers.pdf
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-10-18'
     end: '2024-10-19'
@@ -3080,15 +3080,15 @@
     timezone: TBA
     sources:
     - https://ieee-cas.org/event/conference/2024-ieee-international-symposium-integrated-circuits-and-systems
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://ieee-cas.org/event/conference/2024-ieee-international-symposium-integrated-circuits-and-systems
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://ieee-cas.org/event/conference/2024-ieee-international-symposium-integrated-circuits-and-systems
     identity: ISICAS 2024
@@ -3142,7 +3142,7 @@
     sources:
     - https://neurips.cc/Conferences/2024/Dates
     utc: '2024-05-15T20:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-05-22 20:00:00'
     precision: datetime
@@ -3150,7 +3150,7 @@
     sources:
     - https://neurips.cc/Conferences/2024/Dates
     utc: '2024-05-22T20:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-09-26 01:00:00'
     precision: datetime
@@ -3158,7 +3158,7 @@
     sources:
     - https://neurips.cc/Conferences/2024/Dates
     utc: '2024-09-26T01:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-12-11'
     end: '2024-12-13'
@@ -3166,20 +3166,20 @@
     timezone: TBA
     sources:
     - https://neurips.cc/Conferences/2024/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://neurips.cc/Conferences/2024/Dates
     parser: eventhosts
   - url: https://neurips.cc/Conferences/2024
     identity: NeurIPS 2024
     venue_pattern: Neural Information Processing Systems (?P<place>Vancouver Convention Center)
-  last_success: '2026-11-03T10:28:48Z'
+  last_success: '2026-11-03T10:53:30Z'
   place_sources:
   - https://neurips.cc/Conferences/2024
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICLR
   year: 2024
   id: iclr24
@@ -3199,7 +3199,7 @@
     sources:
     - https://iclr.cc/Conferences/2024/Dates
     utc: '2023-09-24T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2023-09-28 23:59:59'
     precision: datetime
@@ -3207,14 +3207,14 @@
     sources:
     - https://iclr.cc/Conferences/2024/Dates
     utc: '2023-09-29T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-01-15'
     precision: date
     timezone: TBA
     sources:
     - https://iclr.cc/Conferences/2024/CallForPapers
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-05-07'
     end: '2024-05-10'
@@ -3222,11 +3222,11 @@
     timezone: TBA
     sources:
     - https://iclr.cc/Conferences/2024/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://iclr.cc/Conferences/2024/Dates
     parser: eventhosts
@@ -3240,7 +3240,7 @@
       pattern: Final decisions:\s*(?P<date>Jan 15 2024)
   place_sources:
   - https://iclr.cc/Conferences/2024
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ICML
   year: 2024
   id: icml24
@@ -3266,14 +3266,14 @@
     sources:
     - https://icml.cc/Conferences/2024/Dates
     utc: '2024-02-02T11:59:59Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-05-01'
     precision: date
     timezone: UTC-12
     sources:
     - https://icml.cc/Conferences/2024/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-07-23'
     end: '2024-07-25'
@@ -3281,12 +3281,12 @@
     timezone: TBA
     sources:
     - https://icml.cc/Conferences/2024/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: true
   issues:
   - 'abstract: not announced or historical source unavailable'
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://icml.cc/Conferences/2024/Dates
     parser: eventhosts
@@ -3295,7 +3295,7 @@
     venue_pattern: Machine Learning @ (?P<place>Messe Wien Exhibition Congress Center, Vienna, Austria)
   place_sources:
   - https://icml.cc/Conferences/2024
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: EMNLP
   year: 2024
   id: emnlp24
@@ -3314,21 +3314,21 @@
     timezone: TBA
     sources:
     - https://2024.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: commitment
     date: '2024-08-20'
     precision: date
     timezone: TBA
     sources:
     - https://2024.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-09-20'
     precision: date
     timezone: TBA
     sources:
     - https://2024.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-11-12'
     end: '2024-11-14'
@@ -3336,11 +3336,11 @@
     timezone: TBA
     sources:
     - https://2024.emnlp.org/calls/main_conference_papers/
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://2024.emnlp.org/calls/main_conference_papers/
     parser: emnlp
@@ -3350,7 +3350,7 @@
     venue_pattern: (?:took place|will be held) in (?P<place>Miami, Florida) from
   place_sources:
   - https://2024.emnlp.org/
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: ECCV
   year: 2024
   id: eccv24
@@ -3370,7 +3370,7 @@
     sources:
     - https://eccv.ecva.net/Conferences/2024/Dates
     utc: '2024-02-29T21:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2024-03-07 21:00:00'
     precision: datetime
@@ -3378,7 +3378,7 @@
     sources:
     - https://eccv.ecva.net/Conferences/2024/Dates
     utc: '2024-03-07T21:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-07-01 20:00:00'
     precision: datetime
@@ -3386,7 +3386,7 @@
     sources:
     - https://eccv.ecva.net/Conferences/2024/Dates
     utc: '2024-07-01T20:00:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-10-01'
     end: '2024-10-04'
@@ -3394,11 +3394,11 @@
     timezone: TBA
     sources:
     - https://eccv.ecva.net/Conferences/2024/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://eccv.ecva.net/Conferences/2024/Dates
     parser: eventhosts
@@ -3406,7 +3406,7 @@
     parser: cvf_venue
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
 - title: CVPR
   year: 2024
   id: cvpr24
@@ -3426,7 +3426,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2024/Dates
     utc: '2023-11-04T06:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: paper
     date: '2023-11-18 07:59:00'
     precision: datetime
@@ -3434,7 +3434,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2024/Dates
     utc: '2023-11-18T07:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: notification
     date: '2024-02-27 07:59:00'
     precision: datetime
@@ -3442,7 +3442,7 @@
     sources:
     - https://cvpr.thecvf.com/Conferences/2024/Dates
     utc: '2024-02-27T07:59:00Z'
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   - kind: conference
     date: '2024-06-19'
     end: '2024-06-21'
@@ -3450,14 +3450,14 @@
     timezone: TBA
     sources:
     - https://cvpr.thecvf.com/Conferences/2024/Dates
-    checked_at: '2026-11-03T10:28:48Z'
+    checked_at: '2026-11-03T10:53:30Z'
   needs_review: false
   issues: []
-  last_attempt: '2026-11-03T10:28:48Z'
+  last_attempt: '2026-11-03T10:53:30Z'
   place_sources:
   - https://www.thecvf.com/?page_id=100
-  place_checked_at: '2026-11-03T10:28:48Z'
-  last_success: '2026-11-03T10:28:48Z'
+  place_checked_at: '2026-11-03T10:53:30Z'
+  last_success: '2026-11-03T10:53:30Z'
   collection_sources:
   - url: https://cvpr.thecvf.com/Conferences/2024/Dates
     parser: eventhosts
