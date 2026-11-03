@@ -33,8 +33,14 @@ def run():
         published = [e for e in record['events'] if e['precision'] != 'tba']
         assert len(personal) == len(published), 'TBA or duplicate events in personal feed'
         for event in published:
-            uid = f"{record['id']}-{event['kind']}@mms-deadlines"
+            track = '-' + event['track'] if event.get('track') else ''
+            uid = f"{record['id']}-{event['kind']}{track}@mms-deadlines"
             fields = personal[uid]
+            summary = f"{record['title']} {record['year']} — {event['kind']}"
+            if event.get('track_label'):
+                summary += ' · ' + event['track_label']
+            escaped = summary.replace('\\', '\\\\').replace('\n', '\\n').replace(',', '\\,').replace(';', '\\;')
+            assert fields['SUMMARY'] == escaped, 'ICS title differs from event journal label'
             assert fields['URL'] == f"https://ojy0216.github.io/mms-deadlines/conference/?id={record['id']}"
             if event['precision'] == 'date':
                 assert fields['DTSTART;VALUE=DATE'] == event['date'].replace('-', '')

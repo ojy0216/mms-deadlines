@@ -4,8 +4,13 @@ from datetime import date, datetime, timedelta, timezone
 import re
 from zoneinfo import ZoneInfo
 
-TITLES = ('ISSCC', 'VLSI', 'CICC', 'ESSERC', 'NeurIPS', 'ICLR', 'ICML', 'EMNLP', 'ECCV', 'ICCV', 'CVPR')
+TITLES = ('ISSCC', 'VLSI', 'CICC', 'ESSERC', 'A-SSCC', 'ISICAS', 'NeurIPS', 'ICLR', 'ICML', 'EMNLP', 'ECCV', 'ICCV', 'CVPR')
+CIRCUIT_TITLES = frozenset(('ISSCC', 'VLSI', 'CICC', 'ESSERC', 'A-SSCC', 'ISICAS'))
 KINDS = ('abstract', 'paper', 'arr', 'commitment', 'notification', 'conference')
+
+
+def event_key(event):
+    return event['kind'] + (':' + event['track'] if event.get('track') else '')
 
 
 def zone(name):
@@ -32,12 +37,18 @@ def missing(kind):
     return dict(kind=kind, date='TBA', precision='tba', timezone='TBA', sources=[], checked_at=None)
 
 
-def new_record(title, year, link, evidence):
+def new_record(title, year, link, evidence, submission_tracks=None):
     kinds = ('arr', 'commitment', 'notification', 'conference') if title == 'EMNLP' else ('abstract', 'paper', 'notification', 'conference')
-    return dict(title=title, year=year, id=f'{title.lower()}{year % 100:02}', link=link,
+    events = []
+    for kind in kinds:
+        if kind == 'paper' and submission_tracks:
+            events.extend({**missing(kind), **track} for track in submission_tracks)
+        else:
+            events.append(missing(kind))
+    return dict(title=title, year=year, id=f'{title.lower().replace("-", "")}{year % 100:02}', link=link,
                 deadline='TBA', timezone='TBA', date='TBA', place='TBA',
-                sub='Circuit' if title in TITLES[:4] else 'Algorithm',
-                edition_sources=[evidence], events=[missing(k) for k in kinds],
+                sub='Circuit' if title in CIRCUIT_TITLES else 'Algorithm',
+                edition_sources=[evidence], events=events,
                 needs_review=True, issues=['Initial collection pending'])
 
 
@@ -46,14 +57,14 @@ def merge_events(record, candidates, errors, checked_at, overrides=None):
     result = deepcopy(record)
     result['last_attempt'] = checked_at
     issues = list(errors)
-    events = {e['kind']: deepcopy(e) for e in record['events']}
+    events = {event_key(e): deepcopy(e) for e in record['events']}
     for kind in events:
-        choices = [c for c in candidates if c['kind'] == kind]
+        choices = [c for c in candidates if event_key(c) == kind]
         if not choices:
             if events[kind]['date'] != 'TBA':
                 issues.append(f'{kind}: not extracted this attempt; retained previous value')
             continue
-        if any(re.search(rf'(?:^|: ){kind}:', error) for error in errors):
+        if any(re.search(rf'(?:^|: ){re.escape(kind)}: ', error) for error in errors):
             issues.append(f'{kind}: parsing incomplete; retained previous value')
             continue
         extended = [c for c in choices if c.get('extended')]
@@ -67,6 +78,9 @@ def merge_events(record, candidates, errors, checked_at, overrides=None):
             issues.append(f'{kind}: conflicting official sources')
             continue
         value = deepcopy(choices[0])
+        for field in ('track', 'track_label'):
+            if field in events[kind]:
+                value.setdefault(field, events[kind][field])
         if value['date'] == 'TBA' and events[kind]['date'] != 'TBA':
             issues.append(f'{kind}: official value disappeared; retained previous value')
             continue
@@ -80,7 +94,8 @@ def merge_events(record, candidates, errors, checked_at, overrides=None):
             raise ValueError(f'Unknown override kind: {kind}')
         if not value.get('reason') or not value.get('sources'):
             raise ValueError('Overrides require reason and sources')
-        events[kind] = {**deepcopy(value), 'kind': kind, 'manual': True}
+        metadata = {k: v for k, v in events[kind].items() if k in ('kind', 'track', 'track_label')}
+        events[kind] = {**deepcopy(value), **metadata, 'manual': True}
         if value['precision'] == 'datetime':
             events[kind]['utc'] = instant(value)
     result['events'] = list(events.values())
@@ -90,20 +105,24 @@ def merge_events(record, candidates, errors, checked_at, overrides=None):
     conference = events['conference']
     result['date'] = conference['date'] if conference['date'] == 'TBA' else conference['date'] + ' – ' + conference.get('end', conference['date'])
     venues = [c for c in candidates if c['kind'] == 'venue']
-    if conference.get('place') and conference.get('checked_at') == checked_at:
-        venues.append(dict(place=conference['place'], sources=conference['sources']))
+    if conference.get('place') and (conference.get('checked_at') == checked_at or conference.get('manual')):
+        venues.append(dict(place=conference['place'], sources=conference['sources'], checked_at=conference['checked_at']))
     if venues:
         if any(re.search(r'(?:^|: )venue:', error) for error in errors):
             issues.append('venue: parsing incomplete; retained previous value')
         elif len({v['place'] for v in venues}) == 1:
             result['place'] = venues[0]['place']
             result['place_sources'] = sorted(set(s for v in venues for s in v['sources']))
-            result['place_checked_at'] = checked_at
+            result['place_checked_at'] = venues[0].get('checked_at', checked_at)
         else:
             issues.append('venue: conflicting official sources; retained previous value')
+    if conference.get('manual') and conference.get('place'):
+        result.update(place=conference['place'], place_sources=conference['sources'],
+                      place_checked_at=conference['checked_at'])
     if result['place'] == 'TBA':
         issues.append('venue: not announced or historical source unavailable')
-    paper = events.get('paper', events.get('arr', missing('paper')))
+    submissions = [e for e in events.values() if e['kind'] in ('paper', 'arr') and e['precision'] != 'tba']
+    paper = min(submissions, key=lambda e: e.get('utc', e['date'])) if submissions else missing('paper')
     result['deadline'] = paper['date'] if paper['precision'] == 'datetime' else 'TBA'
     result['timezone'] = paper.get('timezone', 'TBA')
     result['issues'] = sorted(set(issues))
@@ -124,7 +143,7 @@ def validate(records, require_all=False):
         assert record['title'] in TITLES, 'Unsupported conference'
         assert isinstance(record['year'], int) and 1900 <= record['year'] <= 2200, 'Invalid edition year'
         assert re.fullmatch(r'[a-z][a-z0-9]*', record['id']), 'Invalid stable ID'
-        assert record['sub'] == ('Circuit' if record['title'] in TITLES[:4] else 'Algorithm'), 'Invalid category'
+        assert record['sub'] == ('Circuit' if record['title'] in CIRCUIT_TITLES else 'Algorithm'), 'Invalid category'
         assert record['link'].startswith('https://'), 'Invalid official link'
         assert record['id'] not in ids, 'Duplicate ID'
         edition = (record['title'], record['year'])
@@ -132,10 +151,17 @@ def validate(records, require_all=False):
         assert record['edition_sources'], 'Edition must have official evidence'
         ids.add(record['id'])
         editions.add(edition)
-        kinds = set()
+        kinds, keys = set(), set()
         for event in record['events']:
-            assert event['kind'] in KINDS and event['kind'] not in kinds, 'Invalid/duplicate event'
+            assert event['kind'] in KINDS and event_key(event) not in keys, 'Invalid/duplicate event'
+            keys.add(event_key(event))
             kinds.add(event['kind'])
+            if 'track' in event:
+                assert event['kind'] == 'paper', 'Only paper submissions have journal tracks'
+                assert isinstance(event['track'], str) and re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', event['track']), 'Invalid track'
+                assert isinstance(event.get('track_label'), str) and event['track_label'].strip(), 'Missing track label'
+            else:
+                assert 'track_label' not in event, 'Track label requires a track'
             assert event['precision'] in ('date', 'datetime', 'tba'), 'Invalid precision'
             if event['precision'] == 'tba':
                 assert event['date'] == 'TBA'
@@ -156,6 +182,7 @@ def validate(records, require_all=False):
                 assert int(event['date'][:4]) == record['year'], 'Conference belongs to a different year'
         required = {'arr', 'commitment', 'notification', 'conference'} if record['title'] == 'EMNLP' else {'abstract', 'paper', 'notification', 'conference'}
         assert kinds == required, 'Missing core event kinds'
+        assert not (any(e.get('track') for e in record['events']) and 'paper' in keys), 'Common paper event duplicates journal tracks'
 
 
 def in_window(record, today):

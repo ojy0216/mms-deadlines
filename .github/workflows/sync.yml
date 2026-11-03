@@ -47,6 +47,7 @@ jobs:
         run: |
           python -m utils.collector.sync --validate-only
           python -m unittest discover -s tests -v
+          node tests/test_schedule.js
       - uses: actions/configure-pages@v5
       - name: Build site
         run: bundle exec jekyll build --future
@@ -60,7 +61,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add _data/conferences.yml _data/sync_status.yml
           if ! git diff --cached --quiet; then
-            git commit -m 'Update official conference schedules'
+            git commit -m 'Keep published schedules aligned with official conference sources' -m 'Tested: Data validation; Python and JavaScript regressions; Jekyll build; JSON/ICS parity; internal HTMLProofer'
             git push origin HEAD:${{ github.event.repository.default_branch }}
           fi
       - uses: actions/upload-pages-artifact@v3

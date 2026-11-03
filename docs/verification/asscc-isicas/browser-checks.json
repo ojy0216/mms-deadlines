@@ -1,0 +1,27 @@
+{
+  "browser": "Chromium",
+  "timezone": "Asia/Seoul",
+  "circuitEditions": "ESSERC 2024–2028 preserved; 2026 Circuit filter contains six conferences",
+  "downloads": [
+    {
+      "id": "esserc26",
+      "events": 3
+    },
+    {
+      "id": "asscc26",
+      "events": 3
+    },
+    {
+      "id": "isicas26",
+      "events": 8
+    }
+  ],
+  "isicasJournalLabels": 6,
+  "isicasCalendarEvents": 8,
+  "betweenDeadlines": "open on 2026-05-20, next TCAS-II",
+  "afterAllDeadlines": "closed on 2026-06-02",
+  "unknownJournalDeadline": "open with OJCAS TBA",
+  "historicalJournalLabels": 6,
+  "mobileOverflow": false,
+  "errors": []
+}

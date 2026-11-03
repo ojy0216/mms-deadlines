@@ -4,20 +4,26 @@
 
 **사이트:** https://ojy0216.github.io/mms-deadlines/
 
-- Circuit: ISSCC, VLSI (IEEE/JSAP Symposium on VLSI Technology & Circuits), CICC, ESSERC
+- Circuit: ISSCC, VLSI (IEEE/JSAP Symposium on VLSI Technology & Circuits), CICC, ESSERC, A-SSCC, ISICAS
 - Algorithm: NeurIPS, ICLR, ICML, EMNLP, ECCV, ICCV, CVPR
 - 개최 연도 기준 올해와 이전 2개년, 그리고 공식 발표된 미래 회차를 포함합니다. 2026년에는 2024년부터 표시하며, 2027년부터 2024년 회차는 제외됩니다.
-- 본 논문의 초록·제출·채택 발표, EMNLP ARR 제출·commitment, 개최 기간·장소를 추적합니다. Workshop, late-news, 별도 부가 트랙의 제출 일정은 포함하지 않습니다.
+- 본 논문의 초록·제출·채택 발표, EMNLP ARR 제출·commitment, 개최 기간·장소를 추적합니다. ISICAS는 공식 발표된 모든 저널별 제출 마감을 포함합니다. Workshop, late-news, 별도 부가 트랙의 제출 일정은 포함하지 않습니다.
 
 ## 표시와 데이터 의미
 
 목록은 Circuit / Algorithm, 학회명, 연도로 필터링합니다. 제출이 끝났어도 개최 전이면 예정 학회이며, 개최 종료 회차와 개최일 미정 회차를 별도로 표시합니다. 기존 `/conference/?id=iclr25` 형식의 상세 주소를 유지합니다.
+
+모든 제출 마감이 확인되고 지난 회차만 **Submissions closed**로 분류합니다. ISICAS의 첫 저널 마감이 지났더라도 다른 저널의 마감이 남았거나 TBA이면 접수 종료로 표시하지 않습니다. A-SSCC의 회차 ID는 `asscc26`, ISICAS는 `isicas26` 형식입니다. ESSERC 2024–2028의 기존 회차와 주소를 유지합니다.
 
 정확한 시각과 시간대가 확인된 일정에만 카운트다운과 브라우저 현지 시간을 표시합니다. 날짜만 있는 일정은 임의로 자정이나 AoE 마감 시각을 붙이지 않습니다. 공식 HTML에 포함된 UTC 카운트다운 값도 출처의 명시적인 시각으로 사용합니다. `TBA`는 미발표 또는 확보하지 못한 과거 정보이며, 상세 화면의 확인 필요 사유를 함께 확인해야 합니다.
 
 개최 기간은 공식 자료가 본 회의 날짜를 구분하면 그 기간을 사용합니다. 개최 기간만 발표한 경우에는 발표된 기간을 사용합니다. 개별 workshop 일정은 생성하지 않습니다. 여러 개최지가 있는 회차는 공식 자료에 따라 장소와 기간을 표시합니다.
 
 목록, 상세, 캘린더 및 ICS는 `_data/conferences.yml`의 동일한 `events`를 사용합니다. 종일 일정의 ICS `DTEND`는 종료일 다음 날(배타적 종료)이며, 시간 일정은 UTC로 내보냅니다. TBA는 ICS에서 제외됩니다. 전체 구독 주소는 `/mms-deadlines/ai-deadlines.ics`, 개별 회차 다운로드는 `/mms-deadlines/calendar/<id>.ics`입니다.
+
+저널별 제출은 `kind: paper`, `track: tcas-i`, `track_label: TCAS-I`처럼 저장합니다. 목록의 다음 일정, 상세, 과거 회차 참고, 캘린더와 ICS 제목에 저널명을 표시합니다. 이벤트 식별·병합·중복 검증은 `(kind, track)` 기준이며, ICS UID는 `isicas26-paper-tcas-i@mms-deadlines`처럼 track을 붙입니다. track이 없는 기존 이벤트의 UID는 유지합니다. 호환용 단일 `deadline`은 가장 이른 확인된 제출 일정으로 계산하되, 그 일정이 날짜만 알려졌다면 TBA입니다.
+
+ISICAS 2026은 [공식 일정](https://2026.ieee-isicas.org/authors/important-dates.html)에 따라 TCAS-I·TBioCAS·TCAS-AI·TVLSI는 **5월 11일**, TCAS-II·OJCAS는 **6월 1일**을 저장합니다. 시각이 없어 모두 날짜 정밀도를 유지합니다. ISICAS 2024는 당시 발표된 4개 저널, 2025–2026은 6개 저널을 등록합니다. [IEEE가 발표한 ISICAS 2027](https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems)은 개최 정보만 반영하고 제출 일정·저널 목록은 발표 전까지 추정하지 않습니다.
 
 ## 최초 GitHub Pages 설정
 
@@ -60,6 +66,7 @@ bundle install
 .venv/bin/python -m utils.collector.sync
 .venv/bin/python -m utils.collector.sync --validate-only
 .venv/bin/python -m unittest discover -s tests -v
+node tests/test_schedule.js
 bundle exec jekyll build --future
 .venv/bin/python -m utils.validate_site
 bundle exec htmlproofer ./_site --disable-external --check-favicon --check-html --url-swap '^/mms-deadlines/:/'
@@ -91,6 +98,8 @@ bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --url-ig
 
 URL의 연도만 바꿔 접속에 성공했다는 이유로 미래 회차를 만들지 않습니다. 공식 홈페이지의 연도 링크와 해당 회차 제목을 함께 검증하거나, 공식 미래 행사 목록의 명시적인 회차를 읽습니다. 발표됐지만 별도 사이트·날짜가 없는 회차도 TBA로 보존합니다. 공식 사이트 구조가 바뀌면 등록된 CSS 선택자/문구와 회귀 샘플을 갱신해야 합니다.
 
+저널별 마감이 발표된 회차는 `utils/sources.yml`의 해당 `editions` 항목에 `submission_tracks` 목록을 선언합니다. 각 항목에는 `track`과 `track_label`을 지정하고, 같은 정보를 수집 규칙에도 넣습니다. 수집기는 모든 저널 이벤트를 TBA로 초기화하고 중복되는 공통 paper 이벤트는 만들지 않습니다. 특정 저널의 수집·파싱 실패나 충돌은 그 저널의 기존 값만 보존합니다. 연장 규칙의 `extended: true`도 저널별로 적용합니다.
+
 ## 확인 필요 상태와 복구
 
 1. 사이트의 **Collection health & official sources**, 해당 회차 상세, 또는 `_data/sync_status.yml`에서 실패 출처와 영향을 받은 일정을 확인합니다.
@@ -120,7 +129,26 @@ iclr27:
 
 날짜만 확인했다면 `date: '2026-09-25'`, `precision: date`를 사용합니다. `precision: tba`는 `date: TBA`로 지정합니다. 자동 계산된 `utc`는 직접 작성할 필요가 없습니다. 출처, 확인 시각, 보정 사유를 누락하지 마세요. Override는 매 수집 후 마지막에 적용되므로 자동 파서가 덮어쓰지 않습니다.
 
+기존 `paper` 등 보정 키는 그대로 사용합니다. 저널별 보정은 `paper:tcas-i` 형식으로 지정하며, 다른 저널의 일정을 바꾸지 않습니다.
+
+```yaml
+isicas26:
+  events:
+    paper:tcas-i:
+      date: '2026-05-11'
+      precision: date
+      timezone: TBA
+      sources:
+        - https://2026.ieee-isicas.org/authors/important-dates.html
+      checked_at: '2026-11-03T00:00:00Z'
+      reason: '공식 저널별 일정을 직접 확인한 보정 사유'
+```
+
 현재 보정 파일에는 직접 접속이 불가능한 공식 ESSERC 2025 페이지의 연장 마감·결과 발표 시각과 VLSI 2027 페이지의 제출 마감이 있습니다. 공식 검색 색인에서 확인한 값이며 출처·확인 시각·사유를 기록했습니다. 직접 수집이 복구되면 공식 값과 대조한 뒤 해당 override를 제거합니다.
+
+A-SSCC 2024의 개최 기간·장소도 IEEE Xplore의 공식 색인으로 확인해 보정했습니다. 원래 2024 학회 도메인은 현재 학회 자료를 제공하지 않으므로 일정 출처로 사용하지 않습니다. 확보하지 못한 2024 제출 마감은 TBA로 남깁니다. A-SSCC 2025는 공식 홈페이지의 취소선 처리된 원래 마감을 제외하고 연장 마감을 수집하며, 2026은 IEEE 대만 지부의 공식 CFP PDF를 사용합니다.
+
+이번 추가의 검증 기록과 화면은 [검증 기록](docs/verification/asscc-isicas/verification.md)에 있습니다.
 
 ## 기여
 
