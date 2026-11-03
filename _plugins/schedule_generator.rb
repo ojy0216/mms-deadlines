@@ -24,7 +24,8 @@ module Jekyll
       records.each do |record|
         record['events'].each do |event|
           next if event['precision'] == 'tba'
-          lines += ['BEGIN:VEVENT', "UID:#{record['id']}-#{event['kind']}@mms-deadlines", "DTSTAMP:#{Time.parse(event['checked_at']).utc.strftime('%Y%m%dT%H%M%SZ')}"]
+          identity = [record['id'], event['kind'], event['track']].compact.join('-')
+          lines += ['BEGIN:VEVENT', "UID:#{identity}@mms-deadlines", "DTSTAMP:#{Time.parse(event['checked_at']).utc.strftime('%Y%m%dT%H%M%SZ')}"]
           if event['precision'] == 'date'
             start = Date.parse(event['date'])
             finish = Date.parse(event['end'] || event['date']) + 1
@@ -33,7 +34,8 @@ module Jekyll
             start = Time.parse(event['utc']).utc
             lines += ["DTSTART:#{start.strftime('%Y%m%dT%H%M%SZ')}", "DTEND:#{(start + 60).strftime('%Y%m%dT%H%M%SZ')}"]
           end
-          lines << "SUMMARY:#{escape_ics("#{record['title']} #{record['year']} — #{event['kind']}")}"
+          label = [event['kind'], event['track_label']].compact.join(' · ')
+          lines << "SUMMARY:#{escape_ics("#{record['title']} #{record['year']} — #{label}")}"
           lines << "LOCATION:#{escape_ics(event['place'] || record['place'])}"
           lines << "DESCRIPTION:#{escape_ics("Official: #{event['date']} #{event['timezone']}\n#{event['sources'].join("\n")}")}"
           lines << "URL:#{site.config['url']}#{site.baseurl}/conference/?id=#{record['id']}"

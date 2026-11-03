@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import requests
 import yaml
 
-from .model import TITLES, in_window, merge_events, new_record, validate
+from .model import TITLES, event_key, in_window, merge_events, missing, new_record, validate
 from .parsers import announcement_entries, assert_edition, discover, document, parse_source
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -127,7 +127,17 @@ def run(root=ROOT, now=None, fetch=None):
         for year, edition in sorted(editions.items()):
             if year < now.year - 2:
                 continue
-            record = old.get((title, year)) or new_record(title, year, edition['link'], edition['evidence'])
+            record = deepcopy(old.get((title, year))) or new_record(
+                title, year, edition['link'], edition['evidence'], edition.get('submission_tracks'))
+            tracks = edition.get('submission_tracks')
+            if tracks:
+                # Never copy an old common deadline to a journal without evidence.
+                record['events'] = [e for e in record['events'] if not (e['kind'] == 'paper' and not e.get('track'))]
+                known = {event_key(e) for e in record['events']}
+                for track in tracks:
+                    event = {**missing('paper'), **track}
+                    if event_key(event) not in known:
+                        record['events'].append(event)
             candidates, errors = [], []
             # Past editions remain eligible for missing-information repairs.
             for source in edition['sources']:
@@ -138,7 +148,7 @@ def run(root=ROOT, now=None, fetch=None):
                     if not values:
                         errors.append(f"{source['url']}: schedule not announced or parser not configured")
                 except Exception as exc:
-                    kinds = {rule['kind'] for rule in source.get('rules', [])}
+                    kinds = {event_key(rule) for rule in source.get('rules', [])}
                     if source.get('parser') == 'eventhosts':
                         kinds.update(('abstract', 'paper', 'notification', 'conference'))
                     if source.get('parser') == 'emnlp':

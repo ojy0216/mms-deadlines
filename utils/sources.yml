@@ -549,3 +549,225 @@
   announcements:
   - url: https://www.thecvf.com/?page_id=100
     parser: cvf_venue
+- title: A-SSCC
+  hosts:
+  - www.a-sscc2026.org
+  - www.a-sscc2025.org
+  - a-sscc2024.org
+  - www.asscc.org
+  discovery:
+  - https://www.a-sscc2026.org/
+  editions:
+    2024:
+      link: https://ieeexplore.ieee.org/document/10849111/
+      evidence: https://ieeexplore.ieee.org/document/10849111/
+      sources:
+      - url: https://ieeexplore.ieee.org/document/10849111/
+        identity: 2024 IEEE Asian Solid-State Circuits Conference
+        rules:
+        - kind: conference
+          pattern: Date of Conference:\s*(?P<date>\d+-\d+ November 2024)
+          range: true
+        venue_pattern: Conference Location:\s*(?P<place>Hiroshima, Japan)
+    2025:
+      link: https://www.a-sscc2025.org/
+      evidence: https://www.a-sscc2025.org/
+      sources:
+      - url: https://www.a-sscc2025.org/
+        identity: A-SSCC\s*2025
+        rules:
+        - kind: paper
+          pattern: Paper submission due:\s*,?\s*(?P<date>June \d+, 2025\s*,\s*20:00)\s*\(GMT\)
+          timezone: UTC
+          extended: true
+        - kind: notification
+          pattern: Acceptance notification:\s*(?P<date>August \d+, 2025)
+        - kind: conference
+          pattern: plenary talks is scheduled at the start of the main program,\s*(?P<date>November \d+ through \d+)\.
+          range: true
+        venue_pattern: (?P<place>Daejeon Convention Center \(DCC\), Daejeon, South Korea)
+    2026:
+      link: https://www.a-sscc2026.org/
+      evidence: https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf
+      sources:
+      - url: https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf
+        identity: A\s*-SSCC 2026
+        rules:
+        - kind: paper
+          pattern: Important dates Paper submission (?P<date>June \d+, 2026, 20:00) \(GMT\)
+          timezone: UTC
+        - kind: notification
+          pattern: Acceptance notification (?P<date>August \d+, 2026)
+        - kind: conference
+          pattern: 'Date: (?P<date>November \d+ – \d+, 2026)'
+          range: true
+        format: pdf
+        venue_pattern: Location:\s*(?P<place>The Lin Hotel, Taichung, Taiwan)
+- title: ISICAS
+  hosts:
+  - 2026.ieee-isicas.org
+  - 2025.ieee-isicas.org
+  - www.isicas2024.org
+  - ieee-cas.org
+  discovery:
+  - https://2026.ieee-isicas.org/
+  - https://ieee-cas.org/conference-events
+  editions:
+    2024:
+      link: https://ieee-cas.org/event/conference/2024-ieee-international-symposium-integrated-circuits-and-systems
+      evidence: https://ieee-cas.org/event/conference/2024-ieee-international-symposium-integrated-circuits-and-systems
+      sources:
+      - url: https://ieee-cas.org/event/conference/2024-ieee-international-symposium-integrated-circuits-and-systems
+        identity: ISICAS 2024
+        rules:
+        - kind: paper
+          pattern: Submission Deadline (?P<date>\d+ Apr 2024)
+          extended: true
+          track: tcas-i
+          track_label: TCAS-I
+        - kind: paper
+          pattern: Submission Deadline (?P<date>\d+ Apr 2024)
+          extended: true
+          track: tbiocas
+          track_label: TBioCAS
+        - kind: paper
+          pattern: Submission Deadline (?P<date>\d+ Apr 2024)
+          extended: true
+          track: tcas-ii
+          track_label: TCAS-II
+        - kind: paper
+          pattern: Submission Deadline (?P<date>\d+ Apr 2024)
+          extended: true
+          track: ojcas
+          track_label: OJCAS
+        - kind: conference
+          pattern: held in New Delhi, India from (?P<date>\d+-\d+ October 2024)
+          range: true
+        venue_pattern: Geographic Location (?P<place>New Delhi, India)
+      - url: https://ieee-cas.org/files/ieeecass/2024-03/ISICAS-2024_Call%20for%20Papers.pdf
+        identity: IEEE ISICAS 2024
+        rules:
+        - kind: notification
+          pattern: Noti.cation of Acceptance:\s*(?P<date>July \d+, 2024)
+        format: pdf
+      submission_tracks:
+      - &journals001
+        track: tcas-i
+        track_label: TCAS-I
+      - &journals002
+        track: tbiocas
+        track_label: TBioCAS
+      - &journals003
+        track: tcas-ii
+        track_label: TCAS-II
+      - &journals004
+        track: ojcas
+        track_label: OJCAS
+    2025:
+      link: https://2025.ieee-isicas.org/
+      evidence: https://2025.ieee-isicas.org/authors/ps.html
+      sources:
+      - url: https://2025.ieee-isicas.org/authors/ps.html
+        identity: IEEE ISICAS 2025
+        rules:
+        - kind: paper
+          pattern: \(TCAS-I\)\s*(?P<date>March \d+, 2025)
+          extended: true
+          selector: table
+          track: tcas-i
+          track_label: TCAS-I
+        - kind: paper
+          pattern: \(TBioCAS\)\s*(?P<date>March \d+, 2025)
+          extended: true
+          selector: table
+          track: tbiocas
+          track_label: TBioCAS
+        - kind: paper
+          pattern: \(TCASAI\)\s*(?P<date>March \d+, 2025)
+          extended: true
+          selector: table
+          track: tcas-ai
+          track_label: TCAS-AI
+        - kind: paper
+          pattern: \(TVLSI\)\s*(?P<date>March \d+, 2025)
+          extended: true
+          selector: table
+          track: tvlsi
+          track_label: TVLSI
+        - kind: paper
+          pattern: \(TCAS-II\)\s*(?P<date>March \d+, 2025)
+          extended: true
+          selector: table
+          track: tcas-ii
+          track_label: TCAS-II
+        - kind: paper
+          pattern: IEEE Open Journal of Circuits and Systems\s*(?P<date>March \d+, 2025)
+          extended: true
+          selector: table
+          track: ojcas
+          track_label: OJCAS
+      - url: https://2025.ieee-isicas.org/
+        identity: IEEE ISICAS 2025
+        rules:
+        - kind: conference
+          pattern: (?P<date>October \d+-\d+, 2025), Qingdao, China
+          range: true
+        venue_pattern: (?P<place>Qingdao, China)
+      submission_tracks: &journals005
+      - *journals001
+      - *journals002
+      - track: tcas-ai
+        track_label: TCAS-AI
+      - track: tvlsi
+        track_label: TVLSI
+      - *journals003
+      - *journals004
+    2026:
+      link: https://2026.ieee-isicas.org/
+      evidence: https://2026.ieee-isicas.org/authors/important-dates.html
+      sources:
+      - url: https://2026.ieee-isicas.org/authors/important-dates.html
+        identity: IEEE ISICAS 2026
+        rules:
+        - kind: paper
+          pattern: (?P<date>\d+ [A-Za-z]+ 2026) TCAS-I, TBioCAS, TCAS-AI, TVLSI
+          track: tcas-i
+          track_label: TCAS-I
+        - kind: paper
+          pattern: (?P<date>\d+ [A-Za-z]+ 2026) TCAS-I, TBioCAS, TCAS-AI, TVLSI
+          track: tbiocas
+          track_label: TBioCAS
+        - kind: paper
+          pattern: (?P<date>\d+ [A-Za-z]+ 2026) TCAS-I, TBioCAS, TCAS-AI, TVLSI
+          track: tcas-ai
+          track_label: TCAS-AI
+        - kind: paper
+          pattern: (?P<date>\d+ [A-Za-z]+ 2026) TCAS-I, TBioCAS, TCAS-AI, TVLSI
+          track: tvlsi
+          track_label: TVLSI
+        - kind: paper
+          pattern: (?P<date>\d+ [A-Za-z]+ 2026) TCAS-II, OJCAS
+          track: tcas-ii
+          track_label: TCAS-II
+        - kind: paper
+          pattern: (?P<date>\d+ [A-Za-z]+ 2026) TCAS-II, OJCAS
+          track: ojcas
+          track_label: OJCAS
+        - kind: notification
+          pattern: (?P<date>\d+ [A-Za-z]+ 2026) Acceptance Notification
+        - kind: conference
+          pattern: (?P<date>\d+–\d+ December 2026) ISICAS 2026 The symposium
+          range: true
+        venue_pattern: Location (?P<place>Torino, Italy) Dates
+      submission_tracks: *journals005
+    2027:
+      link: https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems
+      evidence: https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems
+      sources:
+      - url: https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems
+        identity: 2027 IEEE International Symposium on Integrated Circuits and Systems
+        rules:
+        - kind: conference
+          pattern: Date (?P<date>\d+ October 2027 – \d+ October 2027)
+          range: true
+        venue_pattern: Geographic Location (?P<place>Athens, Greece)

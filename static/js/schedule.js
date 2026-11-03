@@ -35,6 +35,7 @@
     return event.precision === 'datetime' ? Date.parse(event.utc) > Date.now() : event.precision === 'date' && (event.end || event.date) >= today();
   }
   function sortKey(event) { return event.utc || event.date; }
+  function eventLabel(event) { return labels[event.kind] + (event.track_label ? ` · ${event.track_label}` : ''); }
   function nextEvent(record) {
     return record.events.filter(future).sort((a, b) => sortKey(a).localeCompare(sortKey(b)))[0];
   }
@@ -42,9 +43,8 @@
     const conference = record.events.find(e => e.kind === 'conference');
     if (conference.precision === 'tba') return 'Dates to be announced';
     if ((conference.end || conference.date.slice(0, 10)) < today()) return 'Past conferences';
-    const submission = record.events.find(e => e.kind === 'commitment') || record.events.find(e => e.kind === 'paper');
-    const completed = event => event && event.precision !== 'tba' && !future(event);
-    if (completed(submission)) {
+    const submissions = record.events.filter(e => ['paper', 'arr', 'commitment'].includes(e.kind));
+    if (submissions.length && submissions.every(event => event.precision !== 'tba' && !future(event))) {
       return 'Submissions closed';
     }
     return 'Upcoming & ongoing';
@@ -94,7 +94,7 @@
       ['abstract', 'paper', 'arr', 'commitment'].forEach(kind => {
         previous.events.filter(event => event.kind === kind).forEach(event => {
           const deadline = node('div', undefined, 'historical-deadline');
-          deadline.append(node('strong', labels[event.kind]), node('span', dateLabel(event)));
+          deadline.append(node('strong', eventLabel(event)), node('span', dateLabel(event)));
           deadlines.append(deadline);
         });
       });
@@ -105,7 +105,7 @@
   }
   function eventView(event, historical = false) {
     const element = node('div', undefined, 'event');
-    element.append(node('h3', labels[event.kind]), node('p', `Official: ${dateLabel(event)}`));
+    element.append(node('h3', eventLabel(event)), node('p', `Official: ${dateLabel(event)}`));
     if (event.precision !== 'tba') element.append(node('p', localLabel(event), 'meta'));
     if (event.place) element.append(node('p', event.place));
     if (event.unresolved_time) element.append(node('p', `Published time: ${event.unresolved_time}; time zone needs confirmation.`, 'warning'));
@@ -123,7 +123,7 @@
     const next = nextEvent(record);
     const milestone = node('div', undefined, 'milestone');
     if (next) {
-      milestone.append(node('strong', `Next: ${labels[next.kind]}`), node('div', dateLabel(next), 'meta'), node('div', localLabel(next), 'meta'), timer(next));
+      milestone.append(node('strong', `Next: ${eventLabel(next)}`), node('div', dateLabel(next), 'meta'), node('div', localLabel(next), 'meta'), timer(next));
     } else milestone.append(node('span', phase(record) === 'Past conferences' ? 'Conference completed' : 'Next milestone: TBA'));
     element.append(milestone);
     if (record.needs_review) element.append(node('p', 'Needs review · see schedule and sources', 'warning'));

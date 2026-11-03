@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from dateutil.parser import parse as parse_date
 from pypdf import PdfReader
 
-from .model import instant, zone
+from .model import event_key, instant, zone
 
 
 class ParseError(ValueError):
@@ -268,9 +268,12 @@ def parse_source(content, source, title, year):
                     event['place'] = values['place'].strip()
                 if rule.get('extended'):
                     event['extended'] = True
+                for field in ('track', 'track_label'):
+                    if field in rule:
+                        event[field] = rule[field]
                 events.append(event)
         except (ValueError, TypeError, AttributeError) as exc:
-            errors.append(f"{rule['kind']}: {exc}")
+            errors.append(f"{event_key(rule)}: {exc}")
     return events, errors
 
 

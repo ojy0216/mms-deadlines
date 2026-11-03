@@ -31,3 +31,16 @@ vlsi27:
       checked_at: '2026-09-06T16:24:10Z'
       reason: Official indexed 2027 homepage announces this deadline; direct site currently returns 401. Remove override after
         direct collection works.
+asscc24:
+  events:
+    conference:
+      date: '2024-11-18'
+      precision: date
+      timezone: TBA
+      sources:
+      - https://ieeexplore.ieee.org/document/10849111/
+      checked_at: '2026-11-03T09:52:53Z'
+      reason: Official indexed conference page verified; direct historical host currently blocks automated collection. Reconcile
+        when access recovers.
+      end: '2024-11-21'
+      place: Hiroshima, Japan

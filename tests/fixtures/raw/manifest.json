@@ -118,5 +118,53 @@
     "url": "https://www.vlsisymposium.org/future-symposia/",
     "retrieved_on": "2026-09-07",
     "sha256": "89c66d848ebe59487e3a380bb01671abb5a276e8b9cadb839919c8ed120503ec"
+  },
+  {
+    "file": "ieee.org.tw_wp-content_uploads_2026_05_A-SSCC_2026_CFP_260408.pdf",
+    "url": "https://ieee.org.tw/wp-content/uploads/2026/05/A-SSCC_2026_CFP_260408.pdf",
+    "retrieved_on": "2026-11-03",
+    "sha256": "7235de468c10565f651aaf4e0897b7a52aae2baa44a075a7fda38218c8f4762f"
+  },
+  {
+    "file": "ieee-cas.org_event_conference_2024-ieee-international-symposium-integrated-circuits-and-systems.html",
+    "url": "https://ieee-cas.org/event/conference/2024-ieee-international-symposium-integrated-circuits-and-systems",
+    "retrieved_on": "2026-11-03",
+    "sha256": "4afac32872a41ad677c3c2e2568bcf208d55accc64c3da192c4053758fc78a87"
+  },
+  {
+    "file": "ieee-cas.org_files_ieeecass_2024-03_ISICAS-2024_Call%20for%20Papers.pdf",
+    "url": "https://ieee-cas.org/files/ieeecass/2024-03/ISICAS-2024_Call%20for%20Papers.pdf",
+    "retrieved_on": "2026-11-03",
+    "sha256": "a00657a343df61a65ec26a0dbc1a645997f6625b5efc62b3f4ab70f19f9609d1"
+  },
+  {
+    "file": "2025.ieee-isicas.org_authors_ps.html",
+    "url": "https://2025.ieee-isicas.org/authors/ps.html",
+    "retrieved_on": "2026-11-03",
+    "sha256": "84598170f58e1cea413e3b3615557a15031e198e592049ad196a087e94e07d8e"
+  },
+  {
+    "file": "2025.ieee-isicas.org.html",
+    "url": "https://2025.ieee-isicas.org/",
+    "retrieved_on": "2026-11-03",
+    "sha256": "4f8d26edbfee556797c60e82d04f595a08a97db1ed97dd456f9c0c401c0447e9"
+  },
+  {
+    "file": "2026.ieee-isicas.org_authors_important-dates.html",
+    "url": "https://2026.ieee-isicas.org/authors/important-dates.html",
+    "retrieved_on": "2026-11-03",
+    "sha256": "cae75a8dd9ed0b6be7b83ffc6f0de3a7bc93900f0445885a9bca202161787fee"
+  },
+  {
+    "file": "ieee-cas.org_event_conference_2027-ieee-international-symposium-integrated-circuits-and-systems.html",
+    "url": "https://ieee-cas.org/event/conference/2027-ieee-international-symposium-integrated-circuits-and-systems",
+    "retrieved_on": "2026-11-03",
+    "sha256": "b5f589fc38dad11f9b0cbee0c226198adf923696398053fdedc1955a29ba225a"
+  },
+  {
+    "file": "www.a-sscc2025.org.html",
+    "url": "https://www.a-sscc2025.org/",
+    "retrieved_on": "2026-11-03",
+    "sha256": "57f3f8059a7bf56cc78c4706bb3434e35de65fa3435744a0ecf32b1ec4bb54a3"
   }
 ]
