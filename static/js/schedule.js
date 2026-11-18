@@ -7,7 +7,10 @@
   const content = document.getElementById('content');
   const params = new URLSearchParams(location.search);
   const localZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const secondsPerDay = 86400;
   let records = [];
+  let renderedAt;
+  let renderedDate;
   function node(tag, text, className) {
     const element = document.createElement(tag);
     if (text !== undefined) element.textContent = text;
@@ -20,8 +23,7 @@
     if (href.endsWith('.ics')) element.download = '';
     return element;
   }
-  function today() {
-    const now = new Date();
+  function localDate(now) {
     return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
   }
   function dateLabel(event) {
@@ -29,10 +31,10 @@
     return event.date + (event.end ? ` – ${event.end}` : '') + (event.timezone !== 'TBA' ? ` (${event.timezone})` : ' (time zone unannounced)');
   }
   function localLabel(event) {
-    return event.precision === 'datetime' ? `${new Date(event.utc).toLocaleString()} (${localZone})` : 'Date only · no precise countdown';
+    return event.precision === 'datetime' ? `${new Date(event.utc).toLocaleString()} (${localZone})` : 'Date only · countdown uses your local date';
   }
   function future(event) {
-    return event.precision === 'datetime' ? Date.parse(event.utc) > Date.now() : event.precision === 'date' && (event.end || event.date) >= today();
+    return event.precision === 'datetime' ? Date.parse(event.utc) > renderedAt : event.precision === 'date' && (event.end || event.date) >= renderedDate;
   }
   function sortKey(event) { return event.utc || event.date; }
   function eventLabel(event) { return labels[event.kind] + (event.track_label ? ` · ${event.track_label}` : ''); }
@@ -42,7 +44,7 @@
   function phase(record) {
     const conference = record.events.find(e => e.kind === 'conference');
     if (conference.precision === 'tba') return 'Dates to be announced';
-    if ((conference.end || conference.date.slice(0, 10)) < today()) return 'Past conferences';
+    if ((conference.end || conference.date.slice(0, 10)) < renderedDate) return 'Past conferences';
     const submissions = record.events.filter(e => ['paper', 'arr', 'commitment'].includes(e.kind));
     if (submissions.length && submissions.every(event => event.precision !== 'tba' && !future(event))) {
       return 'Submissions closed';
@@ -51,24 +53,37 @@
   }
   function timer(event) {
     const element = node('span', '', 'countdown');
-    if (event.precision === 'datetime' && future(event)) element.dataset.utc = event.utc;
+    if (!future(event)) return element;
+    if (event.precision === 'datetime') {
+      element.dataset.utc = event.utc;
+      element.textContent = formatCountdown(Date.parse(event.utc) - renderedAt);
+    } else {
+      // ISO dates parse at UTC midnight, keeping each calendar day the same length.
+      const days = (Date.parse(event.date) - Date.parse(renderedDate)) / (secondsPerDay * 1000);
+      element.textContent = days > 0 ? `D-${days}` : days === 0 ? 'D-Day' : 'Ongoing';
+    }
     return element;
   }
+  function formatCountdown(milliseconds) {
+    const remaining = Math.floor(milliseconds / 1000);
+    return `${Math.floor(remaining / secondsPerDay)}d ${Math.floor(remaining / 3600) % 24}h ${Math.floor(remaining / 60) % 60}m ${remaining % 60}s`;
+  }
   function tick() {
-    document.querySelectorAll('[data-utc]').forEach(element => {
-      const remaining = Math.floor((Date.parse(element.dataset.utc) - Date.now()) / 1000);
-      if (remaining <= 0) { render(); return; }
-      element.textContent = `${Math.floor(remaining / 86400)}d ${Math.floor(remaining / 3600) % 24}h ${Math.floor(remaining / 60) % 60}m ${remaining % 60}s`;
-    });
+    const now = new Date();
+    if (localDate(now) !== renderedDate) { render(now); return; }
+    for (const element of document.querySelectorAll('[data-utc]')) {
+      const remaining = Date.parse(element.dataset.utc) - now.getTime();
+      if (remaining <= 0) { render(now); return; }
+      element.textContent = formatCountdown(remaining);
+    }
   }
   function mostRecentCompleted(record) {
-    const currentDate = today();
     // Search the full dataset, independently of the visible filters.
     return records.filter(candidate => {
       const conference = candidate.events.find(event => event.kind === 'conference');
       return candidate.title === record.title && Number(candidate.year) < Number(record.year) &&
         conference && conference.precision !== 'tba' &&
-        (conference.end || conference.date.slice(0, 10)) < currentDate;
+        (conference.end || conference.date.slice(0, 10)) < renderedDate;
     }).sort((a, b) => Number(b.year) - Number(a.year))[0];
   }
   function historicalReference(record, fullSchedule) {
@@ -140,7 +155,9 @@
       return !value || String(record[{ category: 'sub', conference: 'title', year: 'year' }[key]]) === value;
     }));
   }
-  function render() {
+  function render(now = new Date()) {
+    renderedAt = now.getTime();
+    renderedDate = localDate(now);
     content.replaceChildren();
     if (view === 'detail') {
       document.getElementById('filters').hidden = true;
@@ -206,7 +223,6 @@
       });
       if (!filtered.length) content.append(node('p', 'No conferences match these filters.'));
     }
-    tick();
   }
   fetch(`${base}/schedule.json`).then(response => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
