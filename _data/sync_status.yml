@@ -1,8 +1,8 @@
-last_attempt: '2026-11-18T04:13:17Z'
+last_attempt: '2026-11-18T22:29:02Z'
 conferences:
   NeurIPS:
-    last_attempt: '2026-11-18T04:13:17Z'
-    last_success: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
+    last_success: '2026-11-18T22:29:02Z'
     needs_review: true
     issues:
     - '2027: abstract: not announced or historical source unavailable'
@@ -16,15 +16,15 @@ conferences:
     sources:
     - https://neurips.cc/
   ICLR:
-    last_attempt: '2026-11-18T04:13:17Z'
-    last_success: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
+    last_success: '2026-11-18T22:29:02Z'
     needs_review: false
     issues: []
     sources:
     - https://iclr.cc/
   ICML:
-    last_attempt: '2026-11-18T04:13:17Z'
-    last_success: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
+    last_success: '2026-11-18T22:29:02Z'
     needs_review: true
     issues:
     - '2024: abstract: not announced or historical source unavailable'
@@ -39,36 +39,59 @@ conferences:
     sources:
     - https://icml.cc/
   ECCV:
-    last_attempt: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
     last_success: '2026-11-18T04:13:17Z'
-    needs_review: false
-    issues: []
+    needs_review: true
+    issues:
+    - 'https://www.thecvf.com/?page_id=100: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443): Max retries
+      exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'', port=443)
+      at 0x73f201152c90>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
+    - '2024: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f2010d38f0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
+    - '2026: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f201037500>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     sources:
     - https://eccv.ecva.net/
   ICCV:
-    last_attempt: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
     last_success: '2026-09-06T16:00:05Z'
     needs_review: true
     issues:
+    - 'https://www.thecvf.com/?page_id=100: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443): Max retries
+      exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'', port=443)
+      at 0x73f20114bda0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
+    - '2025: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f201077d40>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2027: abstract: not announced or historical source unavailable'
     - '2027: conference: not announced or historical source unavailable'
+    - '2027: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f2010777a0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2027: notification: not announced or historical source unavailable'
     - '2027: paper: not announced or historical source unavailable'
     - '2029: abstract: not announced or historical source unavailable'
     - '2029: conference: not announced or historical source unavailable'
-    - '2029: https://www.thecvf.com/?page_id=100: schedule not announced or parser not configured'
+    - '2029: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f201076ff0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2029: notification: not announced or historical source unavailable'
     - '2029: paper: not announced or historical source unavailable'
     - '2029: venue: not announced or historical source unavailable'
     - '2031: abstract: not announced or historical source unavailable'
     - '2031: conference: not announced or historical source unavailable'
+    - '2031: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f201077ef0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2031: notification: not announced or historical source unavailable'
     - '2031: paper: not announced or historical source unavailable'
     sources:
     - https://iccv.thecvf.com/
   ISSCC:
-    last_attempt: '2026-11-18T04:13:17Z'
-    last_success: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
+    last_success: '2026-11-18T22:29:02Z'
     needs_review: true
     issues:
     - '2024: abstract: not announced or historical source unavailable'
@@ -77,38 +100,69 @@ conferences:
     - https://www.isscc.org/
     - https://www.isscc.org/past-conferences
   VLSI:
-    last_attempt: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
     last_success: '2026-09-06T16:22:52Z'
     needs_review: true
     issues:
-    - 'https://www.vlsisymposium.org/future-symposia/: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/future-symposia/'
+    - 'https://www.vlsisymposium.org/: ConnectTimeout: HTTPSConnectionPool(host=''www.vlsisymposium.org'', port=443): Max
+      retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.vlsisymposium.org'', port=443)
+      at 0x73f200f2b950>, ''Connection to www.vlsisymposium.org timed out. (connect timeout=10)''))'
+    - 'https://www.vlsisymposium.org/future-symposia/: ConnectTimeout: HTTPSConnectionPool(host=''www.vlsisymposium.org'',
+      port=443): Max retries exceeded with url: /future-symposia/ (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.vlsisymposium.org'',
+      port=443) at 0x73f200f2b290>, ''Connection to www.vlsisymposium.org timed out. (connect timeout=10)''))'
     - '2024: abstract: not announced or historical source unavailable'
+    - '2024: conference: not extracted this attempt; retained previous value'
+    - '2024: https://archive.vlsisymposium.org/24web/: conference: ConnectTimeout: HTTPSConnectionPool(host=''archive.vlsisymposium.org'',
+      port=443): Max retries exceeded with url: /24web/ (Caused by ConnectTimeoutError(<HTTPSConnection(host=''archive.vlsisymposium.org'',
+      port=443) at 0x73f200f295e0>, ''Connection to archive.vlsisymposium.org timed out. (connect timeout=10)''))'
+    - '2024: https://archive.vlsisymposium.org/24web/call-for-papers/: paper: ConnectTimeout: HTTPSConnectionPool(host=''archive.vlsisymposium.org'',
+      port=443): Max retries exceeded with url: /24web/call-for-papers/ (Caused by ConnectTimeoutError(<HTTPSConnection(host=''archive.vlsisymposium.org'',
+      port=443) at 0x73f200f2a450>, ''Connection to archive.vlsisymposium.org timed out. (connect timeout=10)''))'
     - '2024: notification: not announced or historical source unavailable'
+    - '2024: paper: not extracted this attempt; retained previous value'
     - '2025: abstract: not announced or historical source unavailable'
+    - '2025: conference: not extracted this attempt; retained previous value'
+    - '2025: https://archive.vlsisymposium.org/25web/index.html: conference: ConnectTimeout: HTTPSConnectionPool(host=''archive.vlsisymposium.org'',
+      port=443): Max retries exceeded with url: /25web/index.html (Caused by ConnectTimeoutError(<HTTPSConnection(host=''archive.vlsisymposium.org'',
+      port=443) at 0x73f200f294f0>, ''Connection to archive.vlsisymposium.org timed out. (connect timeout=10)''))'
+    - '2025: https://archive.vlsisymposium.org/25web/index.html: paper: ConnectTimeout: HTTPSConnectionPool(host=''archive.vlsisymposium.org'',
+      port=443): Max retries exceeded with url: /25web/index.html (Caused by ConnectTimeoutError(<HTTPSConnection(host=''archive.vlsisymposium.org'',
+      port=443) at 0x73f200f294f0>, ''Connection to archive.vlsisymposium.org timed out. (connect timeout=10)''))'
     - '2025: notification: not announced or historical source unavailable'
+    - '2025: paper: not extracted this attempt; retained previous value'
     - '2026: abstract: not announced or historical source unavailable'
     - '2026: conference: not extracted this attempt; retained previous value'
     - '2026: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf:
-      conference: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf'
+      conference: ConnectTimeout: HTTPSConnectionPool(host=''www.vlsisymposium.org'', port=443): Max retries exceeded with
+      url: /wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.vlsisymposium.org'',
+      port=443) at 0x73f200f29b20>, ''Connection to www.vlsisymposium.org timed out. (connect timeout=10)''))'
     - '2026: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf:
-      paper: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf'
+      paper: ConnectTimeout: HTTPSConnectionPool(host=''www.vlsisymposium.org'', port=443): Max retries exceeded with url:
+      /wp-content/uploads/2025/10/2026-Symposium-on-VLSI-Technology-Circuits-Call-for-Papers-PR.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.vlsisymposium.org'',
+      port=443) at 0x73f200f29b20>, ''Connection to www.vlsisymposium.org timed out. (connect timeout=10)''))'
     - '2026: notification: not announced or historical source unavailable'
     - '2026: paper: not extracted this attempt; retained previous value'
     - '2027: abstract: not announced or historical source unavailable'
     - '2027: conference: not extracted this attempt; retained previous value'
-    - '2027: https://dev.vlsisymposium.org/: paper: HTTPError: 401 Client Error: Unauthorized for url: https://dev.vlsisymposium.org/'
-    - '2027: https://www.vlsisymposium.org/future-symposia/: source: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/future-symposia/'
+    - '2027: https://dev.vlsisymposium.org/: paper: ConnectTimeout: HTTPSConnectionPool(host=''dev.vlsisymposium.org'', port=443):
+      Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host=''dev.vlsisymposium.org'', port=443)
+      at 0x73f200f29a30>, ''Connection to dev.vlsisymposium.org timed out. (connect timeout=10)''))'
+    - '2027: https://www.vlsisymposium.org/future-symposia/: source: ConnectTimeout: HTTPSConnectionPool(host=''www.vlsisymposium.org'',
+      port=443): Max retries exceeded with url: /future-symposia/ (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.vlsisymposium.org'',
+      port=443) at 0x73f200f280e0>, ''Connection to www.vlsisymposium.org timed out. (connect timeout=10)''))'
     - '2027: notification: not announced or historical source unavailable'
     - '2027: paper: not extracted this attempt; retained previous value'
     - '2028: abstract: not announced or historical source unavailable'
     - '2028: conference: not extracted this attempt; retained previous value'
-    - '2028: https://www.vlsisymposium.org/future-symposia/: source: HTTPError: 404 Client Error: Not Found for url: https://www.vlsisymposium.org/future-symposia/'
+    - '2028: https://www.vlsisymposium.org/future-symposia/: source: ConnectTimeout: HTTPSConnectionPool(host=''www.vlsisymposium.org'',
+      port=443): Max retries exceeded with url: /future-symposia/ (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.vlsisymposium.org'',
+      port=443) at 0x73f200f2aea0>, ''Connection to www.vlsisymposium.org timed out. (connect timeout=10)''))'
     - '2028: notification: not announced or historical source unavailable'
     - '2028: paper: not announced or historical source unavailable'
     sources:
     - https://www.vlsisymposium.org/
   CICC:
-    last_attempt: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
     last_success: '2026-09-06T16:25:00Z'
     needs_review: true
     issues:
@@ -128,7 +182,7 @@ conferences:
     sources:
     - https://www.ieee-cicc.org/
   ESSERC:
-    last_attempt: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
     last_success: '2026-10-07T20:25:25Z'
     needs_review: true
     issues:
@@ -147,37 +201,64 @@ conferences:
     - https://www.esserc.org/
     - https://www.esserc2026.org/
   EMNLP:
-    last_attempt: '2026-11-18T04:13:17Z'
-    last_success: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
+    last_success: '2026-11-18T22:29:02Z'
     needs_review: false
     issues: []
     sources:
     - https://2026.emnlp.org/
   CVPR:
-    last_attempt: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
     last_success: '2026-11-18T04:13:17Z'
     needs_review: true
     issues:
+    - 'https://www.thecvf.com/?page_id=100: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443): Max retries
+      exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'', port=443)
+      at 0x73f200fce6c0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
+    - '2024: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f200907fb0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
+    - '2025: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f1ffce8d10>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
+    - '2026: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f20075c410>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
+    - '2027: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f1ffbdb380>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2028: abstract: not announced or historical source unavailable'
     - '2028: conference: not announced or historical source unavailable'
+    - '2028: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f1ffbdba70>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2028: notification: not announced or historical source unavailable'
     - '2028: paper: not announced or historical source unavailable'
     - '2029: abstract: not announced or historical source unavailable'
     - '2029: conference: not announced or historical source unavailable'
+    - '2029: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f1ffbdbad0>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2029: notification: not announced or historical source unavailable'
     - '2029: paper: not announced or historical source unavailable'
     - '2030: abstract: not announced or historical source unavailable'
     - '2030: conference: not announced or historical source unavailable'
+    - '2030: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f1ffbdb260>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2030: notification: not announced or historical source unavailable'
     - '2030: paper: not announced or historical source unavailable'
     - '2031: abstract: not announced or historical source unavailable'
     - '2031: conference: not announced or historical source unavailable'
+    - '2031: https://www.thecvf.com/?page_id=100: source: ConnectTimeout: HTTPSConnectionPool(host=''www.thecvf.com'', port=443):
+      Max retries exceeded with url: /?page_id=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host=''www.thecvf.com'',
+      port=443) at 0x73f200868f80>, ''Connection to www.thecvf.com timed out. (connect timeout=10)''))'
     - '2031: notification: not announced or historical source unavailable'
     - '2031: paper: not announced or historical source unavailable'
     sources:
     - https://cvpr.thecvf.com/
   A-SSCC:
-    last_attempt: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
     last_success: null
     needs_review: true
     issues:
@@ -193,8 +274,8 @@ conferences:
     sources:
     - https://www.a-sscc2026.org/
   ISICAS:
-    last_attempt: '2026-11-18T04:13:17Z'
-    last_success: '2026-11-18T04:13:17Z'
+    last_attempt: '2026-11-18T22:29:02Z'
+    last_success: '2026-11-18T22:29:02Z'
     needs_review: true
     issues:
     - '2024: abstract: not announced or historical source unavailable'
@@ -207,5 +288,5 @@ conferences:
     sources:
     - https://2026.ieee-isicas.org/
     - https://ieee-cas.org/conference-events
-last_success: '2026-11-18T04:13:17Z'
+last_success: '2026-11-18T22:29:02Z'
 record_count: 56
