@@ -12,7 +12,7 @@ import requests
 import yaml
 
 from .model import TITLES, event_key, in_window, merge_events, missing, new_record, validate
-from .parsers import announcement_entries, assert_edition, discover, document, parse_source
+from .parsers import ANNOUNCEMENT_PARSERS, announcement_entries, assert_edition, discover, document, parse_source
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -114,13 +114,22 @@ def run(root=ROOT, now=None, fetch=None):
         editions = {int(y): deepcopy(e) for y, e in config.get('editions', {}).items()}
         for (old_title, year), record in old.items():
             if old_title == title and year not in editions:
-                editions[year] = dict(link=record['link'], evidence=record['edition_sources'][0], sources=record.get('collection_sources', []))
+                sources = record.get('collection_sources', [])
+                editions[year] = dict(link=record['link'], evidence=record['edition_sources'][0], sources=sources,
+                                      announcement_only=bool(sources) and all(
+                                          s.get('parser') in ANNOUNCEMENT_PARSERS for s in sources))
         for year, candidate in discovered.items():
-            if year in editions:
+            # An edition first seen in a future-meeting list must still pick up its
+            # official site (and schedule) once that site is published.
+            upgrade = year in editions and editions[year].get('announcement_only') and not candidate.get('source')
+            if year in editions and not upgrade:
                 continue
             try:
                 source = source_for_discovery(config, candidate, fetch, year)
-                editions[year] = dict(link=candidate['url'], evidence=candidate['discovered_from'], sources=[source])
+                # Keep the announcement as a secondary source: it may be the only venue/date evidence.
+                kept = editions[year]['sources'] if upgrade else []
+                editions[year] = dict(link=candidate['url'], evidence=candidate['discovered_from'],
+                                      sources=[source, *kept], upgraded=bool(upgrade))
             except Exception as exc:
                 discovery_errors.append(f'Discovery {year}: {exc}')
         conf_errors = list(discovery_errors)
@@ -129,6 +138,8 @@ def run(root=ROOT, now=None, fetch=None):
                 continue
             record = deepcopy(old.get((title, year))) or new_record(
                 title, year, edition['link'], edition['evidence'], edition.get('submission_tracks'))
+            if edition.get('upgraded'):
+                record.update(link=edition['link'], edition_sources=[edition['evidence']])
             tracks = edition.get('submission_tracks')
             if tracks:
                 # Never copy an old common deadline to a journal without evidence.

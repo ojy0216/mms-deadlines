@@ -81,6 +81,47 @@ class SyncTests(unittest.TestCase):
             run(self.root, self.now, self.fetch)
         self.assertEqual(self.read(), [])
 
+    def test_announcement_edition_upgrades_to_discovered_site(self):
+        home, cfp = 'https://icml.cc/', 'https://icml.cc/Conferences/2027/CallForPapers'
+        dates, future = 'https://icml.cc/Conferences/2027/Dates', 'https://icml.cc/Conferences/FutureMeetings'
+        announcement = dict(url=future, parser='future_meetings')
+        config = next(c for c in self.registry if c['title'] == 'ICML')
+        config.update(hosts=['icml.cc'], discovery=[home], parser='eventhosts', announcements=[announcement])
+        self.write('utils/sources.yml', self.registry)
+        record = merge_events(new_record('ICML', 2027, future, future),
+                              [dict(kind='venue', place='Rio de Janeiro, Brazil', sources=[future])],
+                              [], '2026-11-25T00:00:00Z')
+        record['collection_sources'] = [announcement]
+        self.write('_data/conferences.yml', [record])
+        pages = {
+            future: '<ul><li>2027 -- Rio de Janeiro, Brazil</li></ul>',
+            cfp: '<a href="/Conferences/2027/Dates">Dates</a>',
+            dates: '<h1>ICML 2027 Meeting Dates</h1><table>'
+                   '<tr><td colspan="5">Paper Submissions</td></tr>'
+                   '<tr><td></td><td>Full Paper Submission Deadline</td>'
+                   "<td>Jan 22 '27 (Anywhere on Earth)</td></tr></table>",
+        }
+
+        def fetch(url, site_up=True):
+            if url == home:
+                return (f'<a href="{cfp}">ICML 2027 Call for Papers</a>' if site_up else '').encode()
+            return pages[url].encode() if url in pages else self.fetch(url)
+
+        run(self.root, self.now, lambda url: fetch(url, site_up=False))
+        icml = next(r for r in self.read() if r['id'] == 'icml27')
+        self.assertEqual(icml['collection_sources'], [announcement])
+
+        run(self.root, self.now, fetch)
+        first = self.read()
+        icml = next(r for r in first if r['id'] == 'icml27')
+        self.assertEqual(icml['collection_sources'], [dict(url=dates, parser='eventhosts'), announcement])
+        self.assertEqual((icml['link'], icml['edition_sources']), (cfp, [home]))
+        paper = next(e for e in icml['events'] if e['kind'] == 'paper')
+        self.assertEqual((paper['date'], paper['sources']), ('2027-01-22', [dates]))
+        self.assertEqual(icml['place'], 'Rio de Janeiro, Brazil')
+        run(self.root, self.now, fetch)
+        self.assertEqual(first, self.read())
+
     def test_failed_venue_does_not_refresh_provenance(self):
         record = new_record('ICML', 2026, 'https://example.org/ICML', 'https://example.org/ICML')
         value = dict(kind='conference', date='2026-06-01', end='2026-06-03',

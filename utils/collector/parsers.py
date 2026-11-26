@@ -16,6 +16,10 @@ class ParseError(ValueError):
     pass
 
 
+# Future-meeting lists name an edition (venue/dates) but never its submission schedule.
+ANNOUNCEMENT_PARSERS = frozenset(('future_meetings', 'cvf_venue', 'esserc_future', 'vlsi_future'))
+
+
 def document(content, pdf=False):
     if pdf:
         if not content.startswith(b'%PDF'):
@@ -203,7 +207,7 @@ def emnlp(soup, source, year):
 
 def parse_source(content, source, title, year):
     text, soup = document(content, source.get('format') == 'pdf')
-    if source.get('parser') in ('future_meetings', 'cvf_venue', 'esserc_future', 'vlsi_future'):
+    if source.get('parser') in ANNOUNCEMENT_PARSERS:
         entries = announcement_entries(content, source, title)
         if year not in entries:
             raise ParseError('Edition no longer present in official announcement list')
